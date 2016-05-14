@@ -55,7 +55,7 @@ tf = 1;
 dt = 0.1;
 % initial situation
 Fig1=figure(1);
-set(Fig1, 'Position', [50 50 600 500])%,'renderer','painters')
+set(Fig1,'Units','Normalized','OuterPosition',[0 0 1 1]);
 
 subplot('position',[0.1, 0.3, 0.8, 0.6]);
 plot(x(:,1),u(1,:),'.r-','markersize', 10);
@@ -80,6 +80,8 @@ plot(x(:,1),uexact,'b');
 axis([0, 1, 0, 1.1]);
 hold off
 
+%save plot
+print('-painters','-dpng',sprintf('images\\dynam_burgers_%d',0))
 %saveas(gcf,sprintf('dynam_burgers%d',0),'pdf');
 
    
@@ -117,7 +119,6 @@ hold off
          
 
          plot(x,u(1,:)','.r-','markersize', 10);%,'LineWidth',2);
-         xlabel('x');
          ylabel('u(x,t)');
          axis([0, 1, 0, 1.1]);
          grid on
@@ -134,6 +135,7 @@ hold off
 		 plot(x(:,1),t(n)*ones(jmax,1),'.b')
          
          %save plot
+         print('-painters','-dpng',sprintf('images\\dynam_burgers_%d',n))
          %saveas(gcf,sprintf('dynam_burgers%d',n),'pdf');
          
          %find max grid error

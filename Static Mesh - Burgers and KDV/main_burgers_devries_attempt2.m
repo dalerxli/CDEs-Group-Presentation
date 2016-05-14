@@ -56,7 +56,7 @@ D1 = three_point_centered_D1(z); %use 3 point central FDM
 % call to ODE solver
 t0 = 0;     %initial time
 tf = 1;     %end time
-dt = 0.01;     %time step
+dt = 0.1;     %time step
 yout = x;
 zout = z;
 nzout= [nzout; nz];
@@ -65,9 +65,10 @@ tout = t0;
 % solver to stop after this many steps:
 maxsteps = 5;
 % initial situation
-figure(1)
+Fig1=figure(1);
+set(Fig1,'Units','Normalized','OuterPosition',[0 0 1 1]);
 subplot('position',[0.1, 0.3, 0.8, 0.6]);
-plot(z,x,'.r-','markersize', 4);
+plot(z,x,'.r-','markersize', 10);
 ylabel('u(x,t)');
 axis([0, 1, 0, 1.1]);
 grid on
@@ -87,6 +88,21 @@ subplot('position', [0.1, 0.3, 0.8, 0.6]);
 plot(z,uexact,'b');
 axis([0, 1, 0, 1.1]);
 hold off
+
+%save plot
+plot_count=0;
+if use_local_refine == 0
+    tstep=num2str(dt);
+    tstep(tstep=='.')=[];
+    print('-painters','-dpng',sprintf(strcat('imagesburg\\static_moving_burgers_dt',...
+        tstep,'_%d'),plot_count))
+else
+    tstep=num2str(dt);
+    tstep(tstep=='.')=[];
+    print('-painters','-dpng',sprintf(strcat('imagesburg\\static_adapt_burgers_dt',...
+        tstep,'_%d'),plot_count))
+end
+
 
 tk = t0;
 tspan= [t0, tf];
@@ -144,12 +160,29 @@ while tk <= tf - 1.e-5
             uexact(i) = burgers_exact(z(i),tk); %exact solution
         end;
 		plot(z,uexact(1:length(z)),'b')
+        ylabel('u(x,t)');
         grid on
         hold off
         axis([0, 1, 0, 1.1]);
 		subplot('position', [0.1, 0.08, 0.8, 0.17])
 		plot(z,tk*ones(nz,1),'.b')
 		tprint = tprint + dt;
+        
+        %save plot
+        plot_count = plot_count + 1;
+        if use_local_refine == 0
+            tstep=num2str(dt);
+            tstep(tstep=='.')=[];
+            print('-painters','-dpng',sprintf(strcat('imagesburg\\static_moving_burgers_dt',...
+                tstep,'_%d'),plot_count))
+        else
+            tstep=num2str(dt);
+            tstep(tstep=='.')=[];
+            print('-painters','-dpng',sprintf(strcat('imagesburg\\static_adapt_burgers_dt',...
+                tstep,'_%d'),plot_count))
+        end
+		
+        
     end
     
     error=[error max(abs(uexact-x'))];

@@ -55,7 +55,7 @@ D1 = three_point_centered_D1(z);
 % call to ODE solver
 t0 = 0;
 tf = 100;
-dt = 5;
+dt = 2;
 yout = x;
 zout = z;
 nzout= [nzout; nz];
@@ -64,13 +64,14 @@ tout = t0;
 % solver to stop after this many steps:
 maxsteps = 10;
 % initial situation
-figure(1)
+Fig1=figure(1);
+set(Fig1,'Units','Normalized','OuterPosition',[0 0 1 1]);
 subplot('position',[0.1, 0.3, 0.8, 0.6]);
-plot(z,x,'.r-');
+plot(z,x,'.r-','markersize', 10);
 ylabel('u(x,t)');
 axis([-30, 70, -0.02, 0.27]);
 grid on
-hold off
+hold on
 subplot('position',[0.1, 0.08, 0.8, 0.17]);
 plot(z,t0*ones(nz,1),'.b');
 ylabel( 't' );
@@ -78,7 +79,21 @@ xlabel( 'x' );
 axis([-30, 70, 0, tf]);
 grid on
 hold on
-%
+
+uexact = kdv3_exact(z,t0); %exact solution
+subplot('position', [0.1, 0.3, 0.8, 0.6]);
+plot(z,uexact,'b');
+axis([-30, 70, -0.02, 0.27]);
+hold off
+
+%save plot
+plot_count=0;
+if use_local_refine == 0
+    print('-painters','-dpng',sprintf('imagesKDV\\static_moving_KDV_dt%d_%d',dt,plot_count))
+else
+    print('-painters','-dpng',sprintf('imagesKDV\\static_adapt_KDV_dt%d_%d',dt,plot_count))
+end
+
 tk = t0;
 tspan= [t0, tf];
 tprint = dt;
@@ -130,13 +145,23 @@ while tk <= tf - 1.e-5
 	 	clearvars uexact
 		uexact = kdv3_exact(z,tk);
 		plot(z,uexact(1:length(z)),'b')
+        ylabel('u(x,t)');
         grid on
         hold off
 		subplot('position', [0.1, 0.08, 0.8, 0.17])
 		plot(z,tk*ones(nz,1),'.b')
-		tprint = tprint + dt;
+        
+        tprint = tprint + dt;
+        
+        %save plot
+        plot_count = plot_count + 1;
+        if use_local_refine == 0
+            print('-painters','-dpng',sprintf('imagesKDV\\static_moving_KDV_dt%d_%d',dt,plot_count))
+        else
+            print('-painters','-dpng',sprintf('imagesKDV\\static_adapt_KDV_dt%d_%d',dt,plot_count))
+        end
+		
     end
-    
     error=[error max(abs(uexact-x))];
 	% compute a new differentiation matrix
 	D1 = three_point_centered_D1(z);
