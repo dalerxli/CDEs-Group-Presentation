@@ -16,6 +16,15 @@ function sec1_2_burgersFDM
 %
 
 
+%set default axes properties
+set(0,'DefaultAxesFontSize', 14,'DefaultAxesFontWeight','bold','DefaultAxesLineWidth',1.5);
+%set default legend properties
+set(0,'DefaultLegendFontSize',14,'DefaultLegendLocation','SouthWest','DefaultLegendFontSizeMode','manual');
+%set default line properties
+set(0,'DefaultLineLineWidth',1.5);
+%set default grid properties
+set(0,'DefaultAxesGridLineStyle','-');
+
 clear
 clf
 cpu0=clock;
@@ -55,15 +64,15 @@ tf = 1;
 dt = 0.1;
 % initial situation
 Fig1=figure(1);
-set(Fig1,'Units','Normalized','OuterPosition',[0 0 1 1]);
+set(Fig1, 'Position', [100 100 1000 600])
 
-subplot('position',[0.1, 0.3, 0.8, 0.6]);
-plot(x(:,1),u(1,:),'.r-','markersize', 10);
+subplot('position',[0.1, 0.3, 0.85, 0.65]);
+plot(x(:,1),u(1,:),'.b-','markersize', 15);
 ylabel('u(x,t)');
 axis([0, 1, 0, 1.1]);
 grid on
 hold on
-subplot('position',[0.1, 0.08, 0.8, 0.17]);
+subplot('position',[0.1, 0.1, 0.85, 0.17]);
 plot(x(:,1),t0*ones(jmax,1),'.b');
 ylabel( 't' );
 xlabel( 'x' );
@@ -75,9 +84,11 @@ for i=1:jmax
     uexact(i) = burgers_exact(x(i,1),t0);
 end;
 
-subplot('position', [0.1, 0.3, 0.8, 0.6]);
-plot(x(:,1),uexact,'b');
+subplot('position', [0.1, 0.3, 0.85, 0.65]);
+plot(x(:,1),uexact,'r','LineWidth',2);
 axis([0, 1, 0, 1.1]);
+legend('Approximate Solution','Exact Solution');
+set(gca,'XTickLabel','');
 hold off
 
 %save plot
@@ -111,14 +122,14 @@ print('-painters','-dpng',sprintf('images\\dynam_burgers_%d',0))
 
       for n=1:N
          figure(1)
-         subplot('position', [0.1, 0.3, 0.8, 0.6]);
+         subplot('position', [0.1, 0.3, 0.85, 0.65]);
          pause(.2)
          
          u=U(:,:,n);
          x=X(:,n);
          
 
-         plot(x,u(1,:)','.r-','markersize', 10);%,'LineWidth',2);
+         plot(x,u(1,:)','.b-','markersize', 15);%,'LineWidth',2);
          ylabel('u(x,t)');
          axis([0, 1, 0, 1.1]);
          grid on
@@ -127,11 +138,13 @@ print('-painters','-dpng',sprintf('images\\dynam_burgers_%d',0))
          for i=1:jmax
             uexact(i) = burgers_exact(x(i,1),t(n)); %exact solution
          end;
-		 plot(x(:,1),uexact,'b')
+		 plot(x(:,1),uexact,'r','LineWidth',2)
+         legend('Approximate Solution','Exact Solution');
+         set(gca,'XTickLabel','');
          grid on
          hold off
          axis([0, 1, 0, 1.1]);
-		 subplot('position', [0.1, 0.08, 0.8, 0.17])
+		 subplot('position', [0.1, 0.1, 0.85, 0.17])
 		 plot(x(:,1),t(n)*ones(jmax,1),'.b')
          
          %save plot

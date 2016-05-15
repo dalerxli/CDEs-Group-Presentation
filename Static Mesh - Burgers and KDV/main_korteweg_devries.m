@@ -3,8 +3,17 @@ clear;
 % Start a stopwatch timer
 tic
 
-%use local_refine function or agereg function?
+%use local_refine function(=1) or agereg function(=0)?
 use_local_refine=0;
+
+%set default axes properties
+set(0,'DefaultAxesFontSize', 14,'DefaultAxesFontWeight','bold','DefaultAxesLineWidth',1.5);
+%set default legend properties
+set(0,'DefaultLegendFontSize',12,'DefaultLegendLocation','NorthWest','DefaultLegendFontSizeMode','manual');
+%set default line properties
+set(0,'DefaultLineLineWidth',1.5);
+%set default grid properties
+set(0,'DefaultAxesGridLineStyle','-');
 
 % Set global variables
 global s
@@ -65,14 +74,14 @@ tout = t0;
 maxsteps = 10;
 % initial situation
 Fig1=figure(1);
-set(Fig1,'Units','Normalized','OuterPosition',[0 0 1 1]);
-subplot('position',[0.1, 0.3, 0.8, 0.6]);
-plot(z,x,'.r-','markersize', 10);
+set(Fig1, 'Position', [100 100 1000 600])
+subplot('position',[0.1, 0.3, 0.85, 0.65]);
+plot(z,x,'.b-','MarkerSize',15);
 ylabel('u(x,t)');
 axis([-30, 70, -0.02, 0.27]);
 grid on
 hold on
-subplot('position',[0.1, 0.08, 0.8, 0.17]);
+subplot('position',[0.1, 0.1, 0.85, 0.17]);
 plot(z,t0*ones(nz,1),'.b');
 ylabel( 't' );
 xlabel( 'x' );
@@ -81,9 +90,11 @@ grid on
 hold on
 
 uexact = kdv3_exact(z,t0); %exact solution
-subplot('position', [0.1, 0.3, 0.8, 0.6]);
-plot(z,uexact,'b');
+subplot('position', [0.1, 0.3, 0.85, 0.65]);
+plot(z,uexact,'r','LineWidth',2);
 axis([-30, 70, -0.02, 0.27]);
+legend('Approximate Solution','Exact Solution');
+set(gca,'XTickLabel','');
 hold off
 
 %save plot
@@ -135,20 +146,23 @@ while tk <= tf - 1.e-5
 	% plot intermediate results
 	if tflag >= 0
 		figure(1)
-		subplot('position', [0.1, 0.3, 0.8, 0.6]);
+		subplot('position', [0.1, 0.3, 0.85, 0.65]);
         pause(.1)
-        plot(z,x,'.r-','markersize', 10);
-        axis([-30, 70, -0.02, 0.27]);
+        plot(z,x,'.b-','MarkerSize',15);
         grid on
         hold on
         
 	 	clearvars uexact
 		uexact = kdv3_exact(z,tk);
-		plot(z,uexact(1:length(z)),'b')
+		plot(z,uexact(1:length(z)),'r','LineWidth',2)
         ylabel('u(x,t)');
+        axis([-30, 70, -0.02, 0.27]);
+        legend('Approximate Solution','Exact Solution');
+        set(gca,'XTickLabel','');
         grid on
         hold off
-		subplot('position', [0.1, 0.08, 0.8, 0.17])
+        
+		subplot('position', [0.1, 0.1, 0.85, 0.17])
 		plot(z,tk*ones(nz,1),'.b')
         
         tprint = tprint + dt;

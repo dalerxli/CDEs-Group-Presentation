@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  14 MAY 2016 17:48
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  15 MAY 2016 13:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1098,12 +1098,12 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 ] [3
 
 ]
-<images/dynam_burgers_0.png, id=244, 1145.7204pt x 582.978pt>
+<images/dynam_burgers_0.png, id=244, 753.0534pt x 451.9284pt>
 File: images/dynam_burgers_0.png Graphic file (type png)
 
 <use images/dynam_burgers_0.png>
 Package pdftex.def Info: images/dynam_burgers_0.png used on input line 96.
-(pdftex.def)             Requested size: 286.4294pt x 145.74414pt.
+(pdftex.def)             Requested size: 188.26288pt x 112.98181pt.
  [4
 
  <./images/dynam_burgers_0.png (PNG copy)>]
@@ -1120,7 +1120,11 @@ images/static_moving_KDV_dt10_3.png (PNG copy)> <./images/static_moving_KDV_dt1
 s/static_moving_KDV_dt10_6.png (PNG copy)> <./images/static_moving_KDV_dt10_7.p
 ng (PNG copy)> <./images/static_moving_KDV_dt10_8.png (PNG copy)> <./images/sta
 tic_moving_KDV_dt10_9.png (PNG copy)> <./images/static_moving_KDV_dt10_10.png (
-PNG copy)> [8
+PNG copy)>
+Overfull \vbox (6.07448pt too high) detected at line 141
+ []
+
+[8
 
 ] <./images/static_moving_KDV_dt2_0.png (PNG copy)> <./images/static_moving_KDV
 _dt2_1.png (PNG copy)> <./images/static_moving_KDV_dt2_2.png (PNG copy)> <./ima
@@ -1154,7 +1158,11 @@ _dt2_43.png (PNG copy)> <./images/static_moving_KDV_dt2_44.png (PNG copy)> <./i
 mages/static_moving_KDV_dt2_45.png (PNG copy)> <./images/static_moving_KDV_dt2_
 46.png (PNG copy)> <./images/static_moving_KDV_dt2_47.png (PNG copy)> <./images
 /static_moving_KDV_dt2_48.png (PNG copy)> <./images/static_moving_KDV_dt2_49.pn
-g (PNG copy)> <./images/static_moving_KDV_dt2_50.png (PNG copy)> [9
+g (PNG copy)> <./images/static_moving_KDV_dt2_50.png (PNG copy)>
+Overfull \vbox (6.07448pt too high) detected at line 148
+ []
+
+[9
 
 ] <./images/static_moving_burgers_dt01_0.png (PNG copy)> <./images/static_movin
 g_burgers_dt01_1.png (PNG copy)> <./images/static_moving_burgers_dt01_2.png (PN
@@ -1163,7 +1171,11 @@ c_moving_burgers_dt01_4.png (PNG copy)> <./images/static_moving_burgers_dt01_5.
 png (PNG copy)> <./images/static_moving_burgers_dt01_6.png (PNG copy)> <./image
 s/static_moving_burgers_dt01_7.png (PNG copy)> <./images/static_moving_burgers_
 dt01_8.png (PNG copy)> <./images/static_moving_burgers_dt01_9.png (PNG copy)> <
-./images/static_moving_burgers_dt01_10.png (PNG copy)> [10
+./images/static_moving_burgers_dt01_10.png (PNG copy)>
+Overfull \vbox (6.07448pt too high) detected at line 155
+ []
+
+[10
 
 ] <./images/static_moving_burgers_dt001_0.png (PNG copy)> <./images/static_movi
 ng_burgers_dt001_1.png (PNG copy)> <./images/static_moving_burgers_dt001_2.png 
@@ -1237,7 +1249,11 @@ g_burgers_dt001_94.png (PNG copy)> <./images/static_moving_burgers_dt001_95.png
  (PNG copy)> <./images/static_moving_burgers_dt001_96.png (PNG copy)> <./images
 /static_moving_burgers_dt001_97.png (PNG copy)> <./images/static_moving_burgers
 _dt001_98.png (PNG copy)> <./images/static_moving_burgers_dt001_99.png (PNG cop
-y)> <./images/static_moving_burgers_dt001_100.png (PNG copy)> [11
+y)> <./images/static_moving_burgers_dt001_100.png (PNG copy)>
+Overfull \vbox (6.07448pt too high) detected at line 162
+ []
+
+[11
 
 ] [12
 
@@ -1248,7 +1264,11 @@ apt_burgers_dt01_4.png (PNG copy)> <./images/static_adapt_burgers_dt01_5.png (P
 NG copy)> <./images/static_adapt_burgers_dt01_6.png (PNG copy)> <./images/stati
 c_adapt_burgers_dt01_7.png (PNG copy)> <./images/static_adapt_burgers_dt01_8.pn
 g (PNG copy)> <./images/static_adapt_burgers_dt01_9.png (PNG copy)> <./images/s
-tatic_adapt_burgers_dt01_10.png (PNG copy)> [13
+tatic_adapt_burgers_dt01_10.png (PNG copy)>
+Overfull \vbox (6.07448pt too high) detected at line 180
+ []
+
+[13
 
 ] <./images/static_adapt_burgers_dt001_0.png (PNG copy)> <./images/static_adapt
 _burgers_dt001_1.png (PNG copy)> <./images/static_adapt_burgers_dt001_2.png (PN
@@ -1321,10 +1341,13 @@ ic_adapt_burgers_dt001_93.png (PNG copy)> <./images/static_adapt_burgers_dt001_
 mages/static_adapt_burgers_dt001_96.png (PNG copy)> <./images/static_adapt_burg
 ers_dt001_97.png (PNG copy)> <./images/static_adapt_burgers_dt001_98.png (PNG c
 opy)> <./images/static_adapt_burgers_dt001_99.png (PNG copy)> <./images/static_
-adapt_burgers_dt001_100.png (PNG copy)> [14
+adapt_burgers_dt001_100.png (PNG copy)>
+Overfull \vbox (6.07448pt too high) detected at line 187
+ []
 
-]
-[15
+[14
+
+] [15
 
 ] <./images/dynam_burgers_0.png (PNG copy)> <./images/dynam_burgers_1.png (PNG 
 copy)> <./images/dynam_burgers_2.png (PNG copy)> <./images/dynam_burgers_3.png 
@@ -1332,7 +1355,11 @@ copy)> <./images/dynam_burgers_2.png (PNG copy)> <./images/dynam_burgers_3.png
 .png (PNG copy)> <./images/dynam_burgers_6.png (PNG copy)> <./images/dynam_burg
 ers_7.png (PNG copy)> <./images/dynam_burgers_8.png (PNG copy)> <./images/dynam
 _burgers_9.png (PNG copy)> <./images/dynam_burgers_10.png (PNG copy)> <./images
-/dynam_burgers_11.png (PNG copy)> [16
+/dynam_burgers_11.png (PNG copy)>
+Overfull \vbox (6.07448pt too high) detected at line 206
+ []
+
+[16
 
 ] [17
 
@@ -1363,7 +1390,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 218.
 Here is how much of TeX's memory you used:
  20585 strings out of 493315
  373799 string characters out of 6137904
- 522997 words of memory out of 5000000
+ 522998 words of memory out of 5000000
  23192 multiletter control sequences out of 15000+600000
  12588 words of font info for 50 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -1373,7 +1400,7 @@ Here is how much of TeX's memory you used:
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb><
 /usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></u
 sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb>
-Output written on CDEsGroupPresentation.pdf (17 pages, 32762479 bytes).
+Output written on CDEsGroupPresentation.pdf (17 pages, 25279551 bytes).
 PDF statistics:
  2806 PDF objects out of 2984 (max. 8388607)
  1805 compressed objects within 19 object streams
