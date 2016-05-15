@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  15 MAY 2016 13:55
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  15 MAY 2016 15:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1354,8 +1354,7 @@ copy)> <./images/dynam_burgers_2.png (PNG copy)> <./images/dynam_burgers_3.png
 (PNG copy)> <./images/dynam_burgers_4.png (PNG copy)> <./images/dynam_burgers_5
 .png (PNG copy)> <./images/dynam_burgers_6.png (PNG copy)> <./images/dynam_burg
 ers_7.png (PNG copy)> <./images/dynam_burgers_8.png (PNG copy)> <./images/dynam
-_burgers_9.png (PNG copy)> <./images/dynam_burgers_10.png (PNG copy)> <./images
-/dynam_burgers_11.png (PNG copy)>
+_burgers_9.png (PNG copy)> <./images/dynam_burgers_10.png (PNG copy)>
 Overfull \vbox (6.07448pt too high) detected at line 206
  []
 
@@ -1388,10 +1387,10 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 218.
  ) 
 Here is how much of TeX's memory you used:
- 20585 strings out of 493315
- 373799 string characters out of 6137904
+ 20583 strings out of 493315
+ 373744 string characters out of 6137904
  522998 words of memory out of 5000000
- 23192 multiletter control sequences out of 15000+600000
+ 23191 multiletter control sequences out of 15000+600000
  12588 words of font info for 50 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  49i,20n,62p,3246b,751s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1400,10 +1399,10 @@ Here is how much of TeX's memory you used:
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb><
 /usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></u
 sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb>
-Output written on CDEsGroupPresentation.pdf (17 pages, 25279551 bytes).
+Output written on CDEsGroupPresentation.pdf (17 pages, 25443320 bytes).
 PDF statistics:
- 2806 PDF objects out of 2984 (max. 8388607)
- 1805 compressed objects within 19 object streams
+ 2800 PDF objects out of 2984 (max. 8388607)
+ 1802 compressed objects within 19 object streams
  47 named destinations out of 1000 (max. 500000)
- 5486 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 5469 words of extra memory for PDF output out of 10000 (max. 10000000)
 

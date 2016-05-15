@@ -92,7 +92,8 @@ set(gca,'XTickLabel','');
 hold off
 
 %save plot
-print('-painters','-dpng',sprintf('images\\dynam_burgers_%d',0))
+plot_count=0;
+%print('-painters','-dpng',sprintf('images\\dynam_burgers_%d',plot_count))
 %saveas(gcf,sprintf('dynam_burgers%d',0),'pdf');
 
    
@@ -148,7 +149,8 @@ print('-painters','-dpng',sprintf('images\\dynam_burgers_%d',0))
 		 plot(x(:,1),t(n)*ones(jmax,1),'.b')
          
          %save plot
-         print('-painters','-dpng',sprintf('images\\dynam_burgers_%d',n))
+         print('-painters','-dpng',sprintf('images\\dynam_burgers_%d',plot_count))
+         plot_count=plot_count+1;
          %saveas(gcf,sprintf('dynam_burgers%d',n),'pdf');
          
          %find max grid error
