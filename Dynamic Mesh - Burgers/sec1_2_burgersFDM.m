@@ -24,6 +24,8 @@ set(0,'DefaultLegendFontSize',14,'DefaultLegendLocation','SouthWest','DefaultLeg
 set(0,'DefaultLineLineWidth',1.5);
 %set default grid properties
 set(0,'DefaultAxesGridLineStyle','-');
+%set default mesh properties
+set(0,'DefaultSurfaceFaceColor','interp');
 
 clear
 clf
@@ -38,10 +40,19 @@ cpu0=clock;
    jmax = 51;
    npde = 1;
    nn = npde*jmax;
+   
+% define time parameters
+t0 = 0;
+tf = 1;
+dt = 0.1;
 
-   x=zeros(jmax,1);
-   u=zeros(npde,jmax);
-
+%initialise solution and error vectors/matrices
+x=zeros(jmax,1);
+u=zeros(npde,jmax);
+xMesh=zeros(length(t0:dt:tf),jmax);
+uMesh=zeros(length(t0:dt:tf),jmax);
+errorMesh=zeros(length(t0:dt:tf),jmax);
+   
 % define initial solution
    
    x=linspace(0,1,jmax)';
@@ -56,12 +67,6 @@ cpu0=clock;
       u(1,i) = burgers_exact(x(i,1),0);
    end;
    
-
-   
-% define time parameters
-t0 = 0;
-tf = 1;
-dt = 0.1;
 % initial situation
 Fig1=figure(1);
 set(Fig1, 'Position', [100 100 1000 600])
@@ -93,8 +98,7 @@ hold off
 
 %save plot
 plot_count=0;
-%print('-painters','-dpng',sprintf('images\\dynam_burgers_%d',plot_count))
-%saveas(gcf,sprintf('dynam_burgers%d',0),'pdf');
+print('-painters','-dpng',sprintf('images\\dynam_burgers_%d',plot_count))
 
    
 % call the moving mesh function
@@ -108,8 +112,6 @@ plot_count=0;
    alpha = 1.0;
    reltol=1e-4;
    abstol=1e-5;
-    
-   error=[];
    
    if job==1 % for solution
 
@@ -149,12 +151,13 @@ plot_count=0;
 		 plot(x(:,1),t(n)*ones(jmax,1),'.b')
          
          %save plot
-         print('-painters','-dpng',sprintf('images\\dynam_burgers_%d',plot_count))
          plot_count=plot_count+1;
-         %saveas(gcf,sprintf('dynam_burgers%d',n),'pdf');
+         print('-painters','-dpng',sprintf('images\\dynam_burgers_%d',plot_count))
          
+         xMesh(n,:)=x;
+         uMesh(n,:)=u';
          %find max grid error
-         error(n)=max(abs(uexact-u(1,:)));
+         errorMesh(n,:)=abs(uexact-u(1,:));
       end
 
    else % for trajectories
@@ -167,8 +170,23 @@ plot_count=0;
       xlabel('x')
       ylabel('t')
    end
+
+Fig2=figure(2);
+set(Fig2, 'Position', [150 100 1000 600])
+surf(xMesh,t,uMesh)
+xlabel('x');
+ylabel('t');
+zlabel('solution');
+
+Fig3=figure(3);
+set(Fig3, 'Position', [200 100 1000 600])
+surf(xMesh,t,errorMesh)
+xlabel('x');
+ylabel('t');
+zlabel('error');
+
 %output hightest error
-fprintf('worst error of all mesh points and all time steps = %6.4f\n',max(error));
+fprintf('worst error of all mesh points and all time steps = %6.4f\n',max(max(errorMesh)));
 %output cputime
 fprintf('cpu time used = %e \n\n', etime(clock,cpu0));
 

@@ -64,7 +64,7 @@ D1 = three_point_centered_D1(z);
 % call to ODE solver
 t0 = 0;
 tf = 100;
-dt = 2;
+dt = 10;
 yout = x;
 zout = z;
 nzout= [nzout; nz];
@@ -98,12 +98,12 @@ set(gca,'XTickLabel','');
 hold off
 
 %save plot
-plot_count=0;
-if use_local_refine == 0
-    print('-painters','-dpng',sprintf('imagesKDV\\static_moving_KDV_dt%d_%d',dt,plot_count))
-else
-    print('-painters','-dpng',sprintf('imagesKDV\\static_adapt_KDV_dt%d_%d',dt,plot_count))
-end
+% plot_count=0;
+% if use_local_refine == 0
+%     print('-painters','-dpng',sprintf('imagesKDV\\static_moving_KDV_dt%d_%d',dt,plot_count))
+% else
+%     print('-painters','-dpng',sprintf('imagesKDV\\static_adapt_KDV_dt%d_%d',dt,plot_count))
+% end
 
 tk = t0;
 tspan= [t0, tf];
@@ -168,12 +168,12 @@ while tk <= tf - 1.e-5
         tprint = tprint + dt;
         
         %save plot
-        plot_count = plot_count + 1;
-        if use_local_refine == 0
-            print('-painters','-dpng',sprintf('imagesKDV\\static_moving_KDV_dt%d_%d',dt,plot_count))
-        else
-            print('-painters','-dpng',sprintf('imagesKDV\\static_adapt_KDV_dt%d_%d',dt,plot_count))
-        end
+%         plot_count = plot_count + 1;
+%         if use_local_refine == 0
+%             print('-painters','-dpng',sprintf('imagesKDV\\static_moving_KDV_dt%d_%d',dt,plot_count))
+%         else
+%             print('-painters','-dpng',sprintf('imagesKDV\\static_adapt_KDV_dt%d_%d',dt,plot_count))
+%         end
 		
     end
     error=[error max(abs(uexact-x))];
@@ -181,7 +181,7 @@ while tk <= tf - 1.e-5
 	D1 = three_point_centered_D1(z);
 end
 %output highest error
-fprintf('worst error of all mesh points and all time steps = %6.4f\n',max(error));
+fprintf('maximum grid error across all time steps = %6.4f\n',max(error));
 % read the stopwatch timer
 tcpu = toc;
 nav = sum(nzout)/length(nzout);

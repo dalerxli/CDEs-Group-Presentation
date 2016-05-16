@@ -28,10 +28,10 @@
       D = sparse(n,n);
 %...
 %...  boundary point     
-      zs=z(1:ns);
-      zd=z(1);
-      [w]=weights(zd,zs,ns,m);
-      D(1,1:ns)=w(1:ns,m+1)';
+      %zs=z(1:ns);
+      %zd=z(1);
+      %[w]=weights(zd,zs,ns,m);
+      %D(1,1:ns)=w(1:ns,m+1)';
 %...
 %...  interior points      
       for i=2:n-1,
@@ -42,9 +42,9 @@
       end;
 %...
 %...  boundary point      
-      zs=z(n-ns+1:n);
-      zd=z(n);
-      [w]=weights(zd,zs,ns,m);
-      D(n,n-2:n)=w(1:ns,m+1)';
+      %zs=z(n-ns+1:n);
+      %zd=z(n);
+      %[w]=weights(zd,zs,ns,m);
+      %D(n,n-2:n)=w(1:ns,m+1)';
       
       

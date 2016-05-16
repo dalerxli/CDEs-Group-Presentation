@@ -45,27 +45,10 @@ bound= 1.1;     %defines a locally bounded grid
 imesh= 1;   %(binary) specify monitor funciton
 ilim = 1;   %(binary) whether to limit u_xx
 
-% refine the initial grid
-if use_local_refine == 0
-    [z_new, nz_new, ier, tolz_new] = agereg(z,x,npdes,nzmax,alpha,beta,tolz,bound,imesh,ilim);
-    tolz = tolz_new;
-else
-    [z_new, nz_new] = static_local_refine(z,x,basez,npdes,nzmax,alpha,beta,tolz,bound,imesh,ilim);
-end
-
-% interpolate the dependent variables
-x_new = spline(z,x,z_new);
-x = x_new';
-z = z_new';
-nz = nz_new;
-
-% differentiation matrix
-D1 = three_point_centered_D1(z); %use 3 point central FDM
-
 % call to ODE solver
 t0 = 0;     %initial time
 tf = 1;     %end time
-dt = 0.1;     %time step
+dt = 0.01;     %adaption frequency
 yout = x;
 zout = z;
 nzout= [nzout; nz];
@@ -98,22 +81,40 @@ plot(z,uexact,'r','LineWidth',2);
 axis([0, 1, 0, 1.1]);
 legend('Approximate Solution','Exact Solution');
 set(gca,'XTickLabel','');
+
 hold off
 
 %save plot
-plot_count=0;
+% plot_count=0;
+% if use_local_refine == 0
+%     tstep=num2str(dt);
+%     tstep(tstep=='.')=[];
+%     print('-painters','-dpng',sprintf(strcat('imagesburg\\static_moving_burgers_dt',...
+%         tstep,'_%d'),plot_count))
+% else
+%     tstep=num2str(dt);
+%     tstep(tstep=='.')=[];
+%     print('-painters','-dpng',sprintf(strcat('imagesburg\\static_adapt_burgers_dt',...
+%         tstep,'_%d'),plot_count))
+% end
+
+
+% refine the initial grid
 if use_local_refine == 0
-    tstep=num2str(dt);
-    tstep(tstep=='.')=[];
-    print('-painters','-dpng',sprintf(strcat('imagesburg\\static_moving_burgers_dt',...
-        tstep,'_%d'),plot_count))
+    [z_new, nz_new, ier, tolz_new] = agereg(z,x,npdes,nzmax,alpha,beta,tolz,bound,imesh,ilim);
+    tolz = tolz_new;
 else
-    tstep=num2str(dt);
-    tstep(tstep=='.')=[];
-    print('-painters','-dpng',sprintf(strcat('imagesburg\\static_adapt_burgers_dt',...
-        tstep,'_%d'),plot_count))
+    [z_new, nz_new] = static_local_refine(z,x,basez,npdes,nzmax,alpha,beta,tolz,bound,imesh,ilim);
 end
 
+% interpolate the dependent variables
+x_new = spline(z,x,z_new);
+x = x_new';
+z = z_new';
+nz = nz_new;
+
+% differentiation matrix
+D1 = three_point_centered_D1(z); %use 3 point central FDM
 
 tk = t0;
 tspan= [t0, tf];
@@ -123,7 +124,7 @@ eps = 0.001;
 while tk <= tf - 1.e-5
 % initialize step counter
 	nsteps= 0;
-
+    
 	% do the integration for maxsteps steps in a loop % until t becomes larger than tf
 	options = odeset('RelTol',1e-5,'AbsTol',1e-5);
 	options = odeset(options,'Events',@count_steps);
@@ -145,10 +146,9 @@ while tk <= tf - 1.e-5
     end
     
     % interpolate the dependent variables
-	%x_new = spline(z,[1 x(2:end-1) 0.1],z_new);
     x_new = spline(z,x,z_new);
 	x =	x_new';
-	yout = [yout; x];
+	%yout = [yout; x];
     
 	z = z_new';
 	nz = nz_new;
@@ -182,18 +182,18 @@ while tk <= tf - 1.e-5
 		tprint = tprint + dt;
         
         %save plot
-        plot_count = plot_count + 1;
-        if use_local_refine == 0
-            tstep=num2str(dt);
-            tstep(tstep=='.')=[];
-            print('-painters','-dpng',sprintf(strcat('imagesburg\\static_moving_burgers_dt',...
-                tstep,'_%d'),plot_count))
-        else
-            tstep=num2str(dt);
-            tstep(tstep=='.')=[];
-            print('-painters','-dpng',sprintf(strcat('imagesburg\\static_adapt_burgers_dt',...
-                tstep,'_%d'),plot_count))
-        end
+%         plot_count = plot_count + 1;
+%         if use_local_refine == 0
+%             tstep=num2str(dt);
+%             tstep(tstep=='.')=[];
+%             print('-painters','-dpng',sprintf(strcat('imagesburg\\static_moving_burgers_dt',...
+%                 tstep,'_%d'),plot_count))
+%         else
+%             tstep=num2str(dt);
+%             tstep(tstep=='.')=[];
+%             print('-painters','-dpng',sprintf(strcat('imagesburg\\static_adapt_burgers_dt',...
+%                 tstep,'_%d'),plot_count))
+%         end
 		
         
     end
@@ -203,7 +203,7 @@ while tk <= tf - 1.e-5
 	D1 = three_point_centered_D1(z);
 end
 %output highest error
-fprintf('worst error of all mesh points and all time steps = %6.4f\n',max(error));
+fprintf('max grid error across all time steps = %6.4f\n',max(error));
 % read the stopwatch timer
 tcpu = toc; %output computation ttime
 nav = sum(nzout)/length(nzout); %output average number of mesh points
