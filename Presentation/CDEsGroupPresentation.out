@@ -1,10 +1,11 @@
 \BOOKMARK [2][]{Outline0.2}{Introduction}{}% 1
-\BOOKMARK [3][]{Outline0.2.1.3}{Motivation}{Outline0.2}% 2
-\BOOKMARK [3][]{Outline0.2.2.4}{Method of lines used to solve Burgers' equation}{Outline0.2}% 3
-\BOOKMARK [2][]{Outline0.3}{Monitor Function}{}% 4
-\BOOKMARK [3][]{Outline0.3.1.5}{Equidistribution principle}{Outline0.3}% 5
-\BOOKMARK [3][]{Outline0.3.2.6}{Choice of monitor function}{Outline0.3}% 6
-\BOOKMARK [2][]{Outline0.4}{Static Method}{}% 7
-\BOOKMARK [3][]{Outline0.4.1.7}{Moving Mesh theory and examples}{Outline0.4}% 8
-\BOOKMARK [3][]{Outline0.4.2.12}{Mesh Refinement theory and examples}{Outline0.4}% 9
-\BOOKMARK [2][]{Outline0.5}{Dynamic Method}{}% 10
+\BOOKMARK [3][]{Outline0.2.1.3}{Standard method of lines}{Outline0.2}% 2
+\BOOKMARK [3][]{Outline0.2.2.4}{Motivation}{Outline0.2}% 3
+\BOOKMARK [3][]{Outline0.2.3.5}{Method of lines used to solve Burgers' equation}{Outline0.2}% 4
+\BOOKMARK [2][]{Outline0.3}{Adaptive Method of Lines}{}% 5
+\BOOKMARK [3][]{Outline0.3.1.6}{Equidistribution principle}{Outline0.3}% 6
+\BOOKMARK [3][]{Outline0.3.2.7}{Choice of monitor function}{Outline0.3}% 7
+\BOOKMARK [2][]{Outline0.4}{Static Method}{}% 8
+\BOOKMARK [3][]{Outline0.4.1.8}{Moving Mesh theory and examples}{Outline0.4}% 9
+\BOOKMARK [3][]{Outline0.4.2.13}{Mesh Refinement theory and examples}{Outline0.4}% 10
+\BOOKMARK [2][]{Outline0.5}{Dynamic Method}{}% 11

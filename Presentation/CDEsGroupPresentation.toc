@@ -1,11 +1,12 @@
-\beamer@endinputifotherversion {3.26pt}
+\beamer@endinputifotherversion {3.36pt}
 \beamer@sectionintoc {2}{Introduction}{3}{0}{1}
-\beamer@subsectionintoc {2}{1}{Motivation}{3}{0}{1}
-\beamer@subsectionintoc {2}{2}{Method of lines used to solve Burgers' equation}{4}{0}{1}
-\beamer@sectionintoc {3}{Monitor Function}{5}{0}{2}
-\beamer@subsectionintoc {3}{1}{Equidistribution principle}{5}{0}{2}
-\beamer@subsectionintoc {3}{2}{Choice of monitor function}{6}{0}{2}
-\beamer@sectionintoc {4}{Static Method}{7}{0}{3}
-\beamer@subsectionintoc {4}{1}{Moving Mesh theory and examples}{7}{0}{3}
-\beamer@subsectionintoc {4}{2}{Mesh Refinement theory and examples}{12}{0}{3}
-\beamer@sectionintoc {5}{Dynamic Method}{15}{0}{4}
+\beamer@subsectionintoc {2}{1}{Standard method of lines}{3}{0}{1}
+\beamer@subsectionintoc {2}{2}{Motivation}{4}{0}{1}
+\beamer@subsectionintoc {2}{3}{Method of lines used to solve Burgers' equation}{5}{0}{1}
+\beamer@sectionintoc {3}{Adaptive Method of Lines}{6}{0}{2}
+\beamer@subsectionintoc {3}{1}{Equidistribution principle}{6}{0}{2}
+\beamer@subsectionintoc {3}{2}{Choice of monitor function}{7}{0}{2}
+\beamer@sectionintoc {4}{Static Method}{8}{0}{3}
+\beamer@subsectionintoc {4}{1}{Moving Mesh theory and examples}{8}{0}{3}
+\beamer@subsectionintoc {4}{2}{Mesh Refinement theory and examples}{13}{0}{3}
+\beamer@sectionintoc {5}{Dynamic Method}{16}{0}{4}

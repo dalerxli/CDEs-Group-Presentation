@@ -73,19 +73,32 @@
 \frame{\tableofcontents}
 
 \section{Introduction}
-\subsection{Motivation}
+
+\subsection{Standard method of lines}
 \frame{\frametitle{Motivation}
-\textbf{content}
+\textbf{Method of lines}
 \vspace{0.25cm}
 \begin{itemize}
-\item content
-\vspace{0.25cm}
-\item content
-\vspace{0.25cm}
-\item content
+    \item Discretise in space (ie using finite difference) to generate a system of ODEs.
+    \vspace{0.25cm}
+    \item Solve the system using some solver such as ode15s.
+    \vspace{0.25cm}
+    \item Temporal accuracy guaranteed by the ODE solver, however spatial accuracy results from the discretisation used.
 \end{itemize}
 }
 
+\subsection{Motivation}
+\frame{\frametitle{Motivation}
+\textbf{Mesh adaptation}
+\vspace{0.25cm}
+\begin{itemize}
+    \item Method of lines discretises the space uniformly.
+    \vspace{0.25cm}
+    \item Using a high density uniform mesh to achieve high spatial accuracy wastes nodes in regions of low activity.
+    \vspace{0.25cm}
+    \item Want to adapt the spatial mesh such that nodes are efficiently placed.
+\end{itemize}
+}
 
 \subsection{Method of lines used to solve Burgers' equation}
 \frame{\frametitle{Method of Lines - Burgers' Equation}
@@ -95,29 +108,29 @@
 \centering \includegraphics[scale=.25]{images/dynam_burgers_1.png}
 }
 
-
-\section{Monitor Function}
+\section{Adaptive Method of Lines}
 
 \subsection{Equidistribution principle}
 \frame{\frametitle{Equidistribution Principle}
+\textbf{Tracking the action}
 \begin{itemize}
-\item \textbf{content}
-      \begin{itemize}
-        \item content
-        \item content
-        \item content
-      \end{itemize}
+    \item We want to assign nodes to areas with high activity.
+    \item Use some monitor function $m(x)$ to measure the activity in a region.
+    \item Choose the $x_i$ such that for all $i$, $\int\limits_{x_{i-1}}^{x^{i}} m(x) \, \text{d}x = \int\limits_{x_{i}}^{x^{i+1}} \, \text{d}x$ (equidistribution).
+    \item In practice equidistribution is considered optimal, but some suboptimal methods may be used to have roughly equal distribution in order to reduce computational effort.
 \end{itemize}
 }
 
 \subsection{Choice of monitor function}
 \frame{\frametitle{Choice of Monitor Function}
 \begin{itemize}
-\item content
-\vspace{0.25cm}
-\item content
-\vspace{0.25cm}
-\item content
+    \item Arc length $m(x) = \sqrt{\alpha + u_x^2(x)}$.
+    \vspace{0.25cm}
+    \item Local curvature $m(x) = |u_{xx}(x)|}$.
+    \vspace{0.25cm}
+    \item Other options involving many tuning parameters exist.
+    \vspace{0.25cm}
+    \item Since the true solution is not known, derivatives must be estimated. Can use natural splines to interpolate current solution and use its derivatives as approximation.
 \end{itemize}
 }
 
@@ -125,11 +138,11 @@
 \subsection{Moving Mesh theory and examples}
 \frame{\frametitle{Moving Mesh}
 \begin{itemize}
-\item content
-\vspace{0.25cm}
-\item content
-\vspace{0.25cm}
-\item content
+    \item Fix the number of nodes.
+    \vspace{0.25cm}
+    \item Pause the PDE solver at a set interval to move the mesh nodes to achieve equidistribution.
+    \vspace{0.25cm}
+    \item Interpolate the solution from old mesh to generate initial conditions for new mesh.
 \end{itemize}
 }
 
@@ -164,11 +177,11 @@
 \subsection{Mesh Refinement theory and examples}
 \frame{\frametitle{Mesh Refinement}
 \begin{itemize}
-\item content
+\item Just as in moving mesh, the mesh is updated at set intervals.
 \vspace{0.25cm}
-\item content
+\item Rather than trying to achieve equidistribution. An uniform grid is used as a skeleton, at each pause the monitor function is measured between each node, additional nodes with uniform spacing is added in between nodes that exceed some threshold.
 \vspace{0.25cm}
-\item content
+\item Interpolate and continue.
 \end{itemize}
 }
 
@@ -185,7 +198,6 @@
 \end{itemize}
 \animategraphics[controls, width=1\linewidth]{10}{images/static_adapt_burgers_dt001_}{0}{100}
 }
-
 
 \section{Dynamic Method}
 \frame{\frametitle{Dynamic Method}
