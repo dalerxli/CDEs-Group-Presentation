@@ -6,7 +6,8 @@
 \beamer@sectionintoc {3}{Adaptive Method of Lines}{6}{0}{2}
 \beamer@subsectionintoc {3}{1}{Equidistribution principle}{6}{0}{2}
 \beamer@subsectionintoc {3}{2}{Choice of monitor function}{7}{0}{2}
-\beamer@sectionintoc {4}{Static Method}{8}{0}{3}
-\beamer@subsectionintoc {4}{1}{Moving Mesh theory and examples}{8}{0}{3}
-\beamer@subsectionintoc {4}{2}{Mesh Refinement theory and examples}{13}{0}{3}
-\beamer@sectionintoc {5}{Dynamic Method}{16}{0}{4}
+\beamer@sectionintoc {4}{Static Method}{9}{0}{3}
+\beamer@subsectionintoc {4}{1}{Moving Mesh theory and examples}{9}{0}{3}
+\beamer@subsectionintoc {4}{2}{Mesh Refinement theory and examples}{14}{0}{3}
+\beamer@sectionintoc {5}{Dynamic Method}{17}{0}{4}
+\beamer@subsectionintoc {5}{1}{Dynamic Method}{17}{0}{4}

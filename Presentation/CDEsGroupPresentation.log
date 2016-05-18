@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.8.28)  17 MAY 2016 23:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.8.28)  18 MAY 2016 22:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -936,8 +936,7 @@ Package: animfp 2009/07/23 fixed point addition for animate.sty
 \@anim@lineno=\count192
 \@anim@curfield=\count193
 \@anim@@resizeflags=\count194
-)
-No file CDEsGroupPresentation.aux.
+) (./CDEsGroupPresentation.aux)
 \openout1 = `CDEsGroupPresentation.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
@@ -954,6 +953,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
 LaTeX Font Info:    ... okay on input line 68.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 68.
 LaTeX Font Info:    ... okay on input line 68.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1018,6 +1018,8 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 68.
 LaTeX Info: Redefining \pageref on input line 68.
 LaTeX Info: Redefining \nameref on input line 68.
+
+(./CDEsGroupPresentation.out) (./CDEsGroupPresentation.out)
 \@outlinefile=\write6
 \openout6 = `CDEsGroupPresentation.out'.
 
@@ -1123,24 +1125,21 @@ Package xypdf Info: Line width: 0.43799pt on input line 68.
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 (Font)              size <5> substituted on input line 70.
 
-
-LaTeX Warning: Reference `LastPage' on page 1 undefined on input line 70.
-
 [1{c:/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
-No file CDEsGroupPresentation.toc.
-[2
+(./CDEsGroupPresentation.toc) [2
 
 ] [3
 
 ] [4
 
-] <images/dynam_burgers_1.png, id=240, 753.0534pt x 451.9284pt>
+]
+<images/dynam_burgers_1.png, id=303, 753.0534pt x 451.9284pt>
 File: images/dynam_burgers_1.png Graphic file (type png)
 
 <use images/dynam_burgers_1.png>
-Package pdftex.def Info: images/dynam_burgers_1.png used on input line 109.
+Package pdftex.def Info: images/dynam_burgers_1.png used on input line 114.
 (pdftex.def)             Requested size: 188.26288pt x 112.98181pt.
  [5
 
@@ -1149,7 +1148,23 @@ Package pdftex.def Info: images/dynam_burgers_1.png used on input line 109.
 
 ] [7
 
-] [8
+] <images/mesh_uniform.png, id=444, 422.32782pt x 316.18124pt>
+File: images/mesh_uniform.png Graphic file (type png)
+
+<use images/mesh_uniform.png>
+Package pdftex.def Info: images/mesh_uniform.png used on input line 143.
+(pdftex.def)             Requested size: 147.81694pt x 110.66508pt.
+
+<images/mesh_arclength.png, id=445, 422.32782pt x 316.18124pt>
+File: images/mesh_arclength.png Graphic file (type png)
+
+<use images/mesh_arclength.png>
+Package pdftex.def Info: images/mesh_arclength.png used on input line 143.
+(pdftex.def)             Requested size: 147.81694pt x 110.66508pt.
+ [8
+
+ <./images/mesh_uniform.png (PNG copy)> <./images/mesh_arclength.png (PNG copy)
+>] [9
 
 ] <./images/static_moving_KDV_dt10_0.png (PNG copy)> <./images/static_moving_KD
 V_dt10_1.png (PNG copy)> <./images/static_moving_KDV_dt10_2.png (PNG copy)> <./
@@ -1159,10 +1174,10 @@ s/static_moving_KDV_dt10_6.png (PNG copy)> <./images/static_moving_KDV_dt10_7.p
 ng (PNG copy)> <./images/static_moving_KDV_dt10_8.png (PNG copy)> <./images/sta
 tic_moving_KDV_dt10_9.png (PNG copy)> <./images/static_moving_KDV_dt10_10.png (
 PNG copy)>
-Overfull \vbox (6.08138pt too high) detected at line 151
+Overfull \vbox (6.08138pt too high) detected at line 162
  []
 
-[9
+[10
 
 ] <./images/static_moving_KDV_dt2_0.png (PNG copy)> <./images/static_moving_KDV
 _dt2_1.png (PNG copy)> <./images/static_moving_KDV_dt2_2.png (PNG copy)> <./ima
@@ -1197,10 +1212,10 @@ mages/static_moving_KDV_dt2_45.png (PNG copy)> <./images/static_moving_KDV_dt2_
 46.png (PNG copy)> <./images/static_moving_KDV_dt2_47.png (PNG copy)> <./images
 /static_moving_KDV_dt2_48.png (PNG copy)> <./images/static_moving_KDV_dt2_49.pn
 g (PNG copy)> <./images/static_moving_KDV_dt2_50.png (PNG copy)>
-Overfull \vbox (6.08138pt too high) detected at line 158
+Overfull \vbox (6.08138pt too high) detected at line 169
  []
 
-[10
+[11
 
 ] <./images/static_moving_burgers_dt01_0.png (PNG copy)> <./images/static_movin
 g_burgers_dt01_1.png (PNG copy)> <./images/static_moving_burgers_dt01_2.png (PN
@@ -1210,10 +1225,10 @@ png (PNG copy)> <./images/static_moving_burgers_dt01_6.png (PNG copy)> <./image
 s/static_moving_burgers_dt01_7.png (PNG copy)> <./images/static_moving_burgers_
 dt01_8.png (PNG copy)> <./images/static_moving_burgers_dt01_9.png (PNG copy)> <
 ./images/static_moving_burgers_dt01_10.png (PNG copy)>
-Overfull \vbox (6.08138pt too high) detected at line 165
+Overfull \vbox (6.08138pt too high) detected at line 176
  []
 
-[11
+[12
 
 ] <./images/static_moving_burgers_dt001_0.png (PNG copy)> <./images/static_movi
 ng_burgers_dt001_1.png (PNG copy)> <./images/static_moving_burgers_dt001_2.png 
@@ -1288,12 +1303,12 @@ g_burgers_dt001_94.png (PNG copy)> <./images/static_moving_burgers_dt001_95.png
 /static_moving_burgers_dt001_97.png (PNG copy)> <./images/static_moving_burgers
 _dt001_98.png (PNG copy)> <./images/static_moving_burgers_dt001_99.png (PNG cop
 y)> <./images/static_moving_burgers_dt001_100.png (PNG copy)>
-Overfull \vbox (6.08138pt too high) detected at line 172
+Overfull \vbox (6.08138pt too high) detected at line 183
  []
 
-[12
+[13
 
-] [13
+] [14
 
 ] <./images/static_adapt_burgers_dt01_0.png (PNG copy)> <./images/static_adapt_
 burgers_dt01_1.png (PNG copy)> <./images/static_adapt_burgers_dt01_2.png (PNG c
@@ -1303,10 +1318,10 @@ NG copy)> <./images/static_adapt_burgers_dt01_6.png (PNG copy)> <./images/stati
 c_adapt_burgers_dt01_7.png (PNG copy)> <./images/static_adapt_burgers_dt01_8.pn
 g (PNG copy)> <./images/static_adapt_burgers_dt01_9.png (PNG copy)> <./images/s
 tatic_adapt_burgers_dt01_10.png (PNG copy)>
-Overfull \vbox (6.08138pt too high) detected at line 190
+Overfull \vbox (6.08138pt too high) detected at line 201
  []
 
-[14
+[15
 
 ] <./images/static_adapt_burgers_dt001_0.png (PNG copy)> <./images/static_adapt
 _burgers_dt001_1.png (PNG copy)> <./images/static_adapt_burgers_dt001_2.png (PN
@@ -1380,12 +1395,12 @@ mages/static_adapt_burgers_dt001_96.png (PNG copy)> <./images/static_adapt_burg
 ers_dt001_97.png (PNG copy)> <./images/static_adapt_burgers_dt001_98.png (PNG c
 opy)> <./images/static_adapt_burgers_dt001_99.png (PNG copy)> <./images/static_
 adapt_burgers_dt001_100.png (PNG copy)>
-Overfull \vbox (6.08138pt too high) detected at line 197
+Overfull \vbox (6.08138pt too high) detected at line 208
  []
 
-[15
+[16
 
-] [16
+] [17
 
 ] <./images/dynam_burgers_1.png (PNG copy)> <./images/dynam_burgers_2.png (PNG 
 copy)> <./images/dynam_burgers_3.png (PNG copy)> <./images/dynam_burgers_4.png 
@@ -1393,12 +1408,14 @@ copy)> <./images/dynam_burgers_3.png (PNG copy)> <./images/dynam_burgers_4.png
 .png (PNG copy)> <./images/dynam_burgers_7.png (PNG copy)> <./images/dynam_burg
 ers_8.png (PNG copy)> <./images/dynam_burgers_9.png (PNG copy)> <./images/dynam
 _burgers_10.png (PNG copy)> <./images/dynam_burgers_11.png (PNG copy)>
-Overfull \vbox (6.08138pt too high) detected at line 216
+Overfull \vbox (6.08138pt too high) detected at line 229
  []
 
-[17
+[18
 
-] [18
+]
+Package atenddvi Info: Last page = 19.
+ [19
 
 ]
 \tf@nav=\write7
@@ -1410,15 +1427,11 @@ Overfull \vbox (6.08138pt too high) detected at line 216
 \tf@snm=\write9
 \openout9 = `CDEsGroupPresentation.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 228.
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 228.
- (./CDEsGroupPresentation.aux
-
-Package atenddvi Warning: Rerun LaTeX, last page not yet found.
-
-)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 228.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 228.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 241.
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 241.
+ (./CDEsGroupPresentation.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 241.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 241.
 
 
 Package rerunfilecheck Warning: File `CDEsGroupPresentation.out' has changed.
@@ -1426,41 +1439,36 @@ Package rerunfilecheck Warning: File `CDEsGroupPresentation.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `CDEsGroupPresentation.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  525C411FA8631DDC5ABBB1E5028CE11E;748.
+(rerunfilecheck)             Before: 6B192DEFCFAB09810D638E6A33707308;748
+(rerunfilecheck)             After:  A437C3FBF70F88E12D6B02177E8BA211;813.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 228.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 241.
  ) 
 Here is how much of TeX's memory you used:
- 22525 strings out of 493091
- 410054 string characters out of 6138531
- 552100 words of memory out of 5000000
- 25140 multiletter control sequences out of 15000+600000
- 12439 words of font info for 49 fonts, out of 8000000 for 9000
+ 22635 strings out of 493091
+ 413143 string characters out of 6138531
+ 555545 words of memory out of 5000000
+ 25237 multiletter control sequences out of 15000+600000
+ 12744 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,20n,63p,3248b,759s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,20n,63p,3248b,760s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/tex
-live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><c:/texlive/2015
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><c:/texlive/2015/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmss17.pfb><c:/texlive/2015/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmss8.pfb><c:/texlive/2015/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmssbx10.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmssi10.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmssi8.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
->
-Output written on CDEsGroupPresentation.pdf (18 pages, 25273905 bytes).
+live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2015
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><c:/texlive/2015/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmss12.pfb><c:/texlive/2015/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmss17.pfb><c:/texlive/2015/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmss8.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmssbx10.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mssi10.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pf
+b><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/tex
+live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb>
+Output written on CDEsGroupPresentation.pdf (19 pages, 25308360 bytes).
 PDF statistics:
- 2520 PDF objects out of 2984 (max. 8388607)
- 1534 compressed objects within 16 object streams
- 50 named destinations out of 1000 (max. 500000)
- 5203 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2648 PDF objects out of 2984 (max. 8388607)
+ 1653 compressed objects within 17 object streams
+ 53 named destinations out of 1000 (max. 500000)
+ 5321 words of extra memory for PDF output out of 10000 (max. 10000000)
 

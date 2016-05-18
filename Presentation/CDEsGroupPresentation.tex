@@ -83,7 +83,7 @@
     \vspace{0.25cm}
     \item Solve the system using some solver such as ode15s.
     \vspace{0.25cm}
-    \item Temporal accuracy guaranteed by the ODE solver, however spatial accuracy results from the discretisation used.
+    \item Temporal accuracy handled by the ODE solver, however spatial accuracy results from the discretisation used.
 \end{itemize}
 }
 
@@ -97,6 +97,11 @@
     \item Using a high density uniform mesh to achieve high spatial accuracy wastes nodes in regions of low activity.
     \vspace{0.25cm}
     \item Want to adapt the spatial mesh such that nodes are efficiently placed.
+            \begin{itemize}
+                \item Static moving mesh.
+                \item Static grid refinement.
+                \item Dynamic mesh.
+            \end{itemize}
 \end{itemize}
 }
 
@@ -109,7 +114,6 @@
 }
 
 \section{Adaptive Method of Lines}
-
 \subsection{Equidistribution principle}
 \frame{\frametitle{Equidistribution Principle}
 \textbf{Tracking the action}
@@ -126,12 +130,16 @@
 \begin{itemize}
     \item Arc length $m(x) = \sqrt{\alpha + u_x^2(x)}$.
     \vspace{0.25cm}
-    \item Local curvature $m(x) = |u_{xx}(x)|}$.
+    \item Local curvature $m(x) = |u_{xx}(x)|$.
     \vspace{0.25cm}
     \item Other options involving many tuning parameters exist.
     \vspace{0.25cm}
     \item Since the true solution is not known, derivatives must be estimated. Can use natural splines to interpolate current solution and use its derivatives as approximation.
 \end{itemize}
+}
+
+\frame{\frametitle{Uniform vs Equidistributed Arclengths (n=21)}
+\centering \includegraphics[scale=.35]{images/mesh_uniform.png} \includegraphics[scale=.35]{images/mesh_arclength.png}
 }
 
 \section{Static Method}
@@ -200,13 +208,16 @@
 }
 
 \section{Dynamic Method}
+\subsection{Dynamic Method}
 \frame{\frametitle{Dynamic Method}
 \begin{itemize}
-\item content
+\item Refining the grid at set time steps can cause the mesh to lag behind the moving solution.
 \vspace{0.25cm}
-\item content
+\item Refining too often is computationally expensive and negates any benefits from adaptive mesh.
 \vspace{0.25cm}
-\item content
+\item May be possible to use a priori information to generate functions for the wave to travel along. For example the characteristic curves along which the solution is constant. For a simple moving wave this tracks positions on the wave-front.
+\vspace{0.25cm}
+\item Requires specific a priori knowledge on the problem, not always possible to derive characteristic curves.
 \end{itemize}
 }
 

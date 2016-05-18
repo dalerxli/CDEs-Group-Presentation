@@ -27,38 +27,41 @@
 \headcommand {\beamer@subsectionentry {0}{3}{2}{7}{Choice of monitor function}}\headcommand {\beamer@subsectionpages {6}{6}}
 \headcommand {\slideentry {3}{2}{1}{7/7}{Choice of monitor function}{0}}
 \headcommand {\beamer@framepages {7}{7}}
-\headcommand {\sectionentry {4}{Static Method}{8}{Static Method}{0}}
-\headcommand {\beamer@sectionpages {6}{7}}
-\headcommand {\beamer@subsectionpages {7}{7}}
-\headcommand {\beamer@subsectionentry {0}{4}{1}{8}{Moving Mesh theory and examples}}\headcommand {\beamer@subsectionpages {8}{7}}
-\headcommand {\slideentry {4}{1}{1}{8/8}{Moving Mesh theory and examples}{0}}
+\headcommand {\slideentry {3}{2}{2}{8/8}{Choice of monitor function}{0}}
 \headcommand {\beamer@framepages {8}{8}}
-\headcommand {\slideentry {4}{1}{2}{9/9}{Moving Mesh theory and examples}{0}}
+\headcommand {\sectionentry {4}{Static Method}{9}{Static Method}{0}}
+\headcommand {\beamer@sectionpages {6}{8}}
+\headcommand {\beamer@subsectionpages {7}{8}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{9}{Moving Mesh theory and examples}}\headcommand {\beamer@subsectionpages {9}{8}}
+\headcommand {\slideentry {4}{1}{1}{9/9}{Moving Mesh theory and examples}{0}}
 \headcommand {\beamer@framepages {9}{9}}
-\headcommand {\slideentry {4}{1}{3}{10/10}{Moving Mesh theory and examples}{0}}
+\headcommand {\slideentry {4}{1}{2}{10/10}{Moving Mesh theory and examples}{0}}
 \headcommand {\beamer@framepages {10}{10}}
-\headcommand {\slideentry {4}{1}{4}{11/11}{Moving Mesh theory and examples}{0}}
+\headcommand {\slideentry {4}{1}{3}{11/11}{Moving Mesh theory and examples}{0}}
 \headcommand {\beamer@framepages {11}{11}}
-\headcommand {\slideentry {4}{1}{5}{12/12}{Moving Mesh theory and examples}{0}}
+\headcommand {\slideentry {4}{1}{4}{12/12}{Moving Mesh theory and examples}{0}}
 \headcommand {\beamer@framepages {12}{12}}
-\headcommand {\beamer@subsectionentry {0}{4}{2}{13}{Mesh Refinement theory and examples}}\headcommand {\beamer@subsectionpages {8}{12}}
-\headcommand {\slideentry {4}{2}{1}{13/13}{Mesh Refinement theory and examples}{0}}
+\headcommand {\slideentry {4}{1}{5}{13/13}{Moving Mesh theory and examples}{0}}
 \headcommand {\beamer@framepages {13}{13}}
-\headcommand {\slideentry {4}{2}{2}{14/14}{Mesh Refinement theory and examples}{0}}
+\headcommand {\beamer@subsectionentry {0}{4}{2}{14}{Mesh Refinement theory and examples}}\headcommand {\beamer@subsectionpages {9}{13}}
+\headcommand {\slideentry {4}{2}{1}{14/14}{Mesh Refinement theory and examples}{0}}
 \headcommand {\beamer@framepages {14}{14}}
-\headcommand {\slideentry {4}{2}{3}{15/15}{Mesh Refinement theory and examples}{0}}
+\headcommand {\slideentry {4}{2}{2}{15/15}{Mesh Refinement theory and examples}{0}}
 \headcommand {\beamer@framepages {15}{15}}
-\headcommand {\sectionentry {5}{Dynamic Method}{16}{Dynamic Method}{0}}
-\headcommand {\beamer@sectionpages {8}{15}}
-\headcommand {\beamer@subsectionpages {13}{15}}
-\headcommand {\slideentry {5}{0}{1}{16/16}{}{0}}
+\headcommand {\slideentry {4}{2}{3}{16/16}{Mesh Refinement theory and examples}{0}}
 \headcommand {\beamer@framepages {16}{16}}
-\headcommand {\slideentry {5}{0}{2}{17/17}{}{0}}
+\headcommand {\sectionentry {5}{Dynamic Method}{17}{Dynamic Method}{0}}
+\headcommand {\beamer@sectionpages {9}{16}}
+\headcommand {\beamer@subsectionpages {14}{16}}
+\headcommand {\beamer@subsectionentry {0}{5}{1}{17}{Dynamic Method}}\headcommand {\beamer@subsectionpages {17}{16}}
+\headcommand {\slideentry {5}{1}{1}{17/17}{Dynamic Method}{0}}
 \headcommand {\beamer@framepages {17}{17}}
-\headcommand {\slideentry {6}{0}{1}{18/18}{}{0}}
+\headcommand {\slideentry {5}{1}{2}{18/18}{Dynamic Method}{0}}
 \headcommand {\beamer@framepages {18}{18}}
-\headcommand {\beamer@partpages {1}{18}}
-\headcommand {\beamer@subsectionpages {18}{18}}
-\headcommand {\beamer@sectionpages {18}{18}}
-\headcommand {\beamer@documentpages {18}}
-\headcommand {\def \inserttotalframenumber {18}}
+\headcommand {\slideentry {6}{0}{1}{19/19}{}{0}}
+\headcommand {\beamer@framepages {19}{19}}
+\headcommand {\beamer@partpages {1}{19}}
+\headcommand {\beamer@subsectionpages {19}{19}}
+\headcommand {\beamer@sectionpages {19}{19}}
+\headcommand {\beamer@documentpages {19}}
+\headcommand {\def \inserttotalframenumber {19}}
