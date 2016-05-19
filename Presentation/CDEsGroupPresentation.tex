@@ -89,13 +89,30 @@
 
 \subsection{Motivation}
 \frame{\frametitle{Motivation}
-\textbf{Mesh adaptation}
+\textbf{Problems with Uniform Mesh}
 \vspace{0.25cm}
 \begin{itemize}
     \item Method of lines discretises the space uniformly.
     \vspace{0.25cm}
-    \item Using a high density uniform mesh to achieve high spatial accuracy wastes nodes in regions of low activity.
+    \item Low density uniform mesh doesn't approximate steep fronts well.
     \vspace{0.25cm}
+    \item Using a high density uniform mesh to achieve high spatial accuracy wastes nodes in regions of low activity.
+\end{itemize}
+}
+
+\subsection{Method of lines used to solve Burgers' equation}
+\frame{\frametitle{Method of Lines - Burgers' Equation}
+\begin{itemize}
+\item Bad approximation in regions of high spatial activity when grid is uniform.
+\end{itemize}
+\centering \includegraphics[scale=.25]{images/dynam_burgers_1.png}
+}
+
+\subsection{Motivation}
+\frame{\frametitle{Motivation}
+\textbf{Mesh adaptation}
+\vspace{0.25cm}
+\begin{itemize}
     \item Want to adapt the spatial mesh such that nodes are efficiently placed.
             \begin{itemize}
                 \item Static moving mesh.
@@ -105,14 +122,6 @@
 \end{itemize}
 }
 
-\subsection{Method of lines used to solve Burgers' equation}
-\frame{\frametitle{Method of Lines - Burgers' Equation}
-\begin{itemize}
-\item content
-\end{itemize}
-\centering \includegraphics[scale=.25]{images/dynam_burgers_1.png}
-}
-
 \section{Adaptive Method of Lines}
 \subsection{Equidistribution principle}
 \frame{\frametitle{Equidistribution Principle}
@@ -120,7 +129,7 @@
 \begin{itemize}
     \item We want to assign nodes to areas with high activity.
     \item Use some monitor function $m(x)$ to measure the activity in a region.
-    \item Choose the $x_i$ such that for all $i$, $\int\limits_{x_{i-1}}^{x^{i}} m(x) \, \text{d}x = \int\limits_{x_{i}}^{x^{i+1}} \, \text{d}x$ (equidistribution).
+    \item Choose the $x_i$ such that for all $i$,\\ $\int\limits_{x_{i-1}}^{x^{i}} m(x) \, \text{d}x = \int\limits_{x_{i}}^{x^{i+1}} m(x) \, \text{d}x$ (equidistribution).
     \item In practice equidistribution is considered optimal, but some suboptimal methods may be used to have roughly equal distribution in order to reduce computational effort.
 \end{itemize}
 }
@@ -182,14 +191,31 @@
 \animategraphics[controls, width=1\linewidth]{10}{images/static_moving_burgers_dt001_}{0}{100}
 }
 
+%\subsection{Mesh Refinement theory and examples}
+%\frame{\frametitle{Mesh Refinement}
+%\begin{itemize}
+%\item Just as in moving mesh, the mesh is updated at set intervals.
+%\vspace{0.25cm}
+%\item Rather than trying to achieve equidistribution, A uniform grid is used as a skeleton, at each pause the monitor function is measured between each node, additional nodes with uniform spacing is added in between nodes that exceed some threshold.
+%\vspace{0.25cm}
+%\item Interpolate and continue.
+%\end{itemize}
+%}
+
 \subsection{Mesh Refinement theory and examples}
 \frame{\frametitle{Mesh Refinement}
 \begin{itemize}
 \item Just as in moving mesh, the mesh is updated at set intervals.
 \vspace{0.25cm}
-\item Rather than trying to achieve equidistribution. An uniform grid is used as a skeleton, at each pause the monitor function is measured between each node, additional nodes with uniform spacing is added in between nodes that exceed some threshold.
+\item Procedure at each ``pause":
+	\begin{itemize}
+		\item Reset to uniform grid.
+		\item Evaluate monitor function between each pair of nodes.
+		\item If threshold exceeded, add nodes with uniform spacing
+		\item If below threshold, remove some nodes.
+		\item Interpolate and repeat.
+	\end{itemize}
 \vspace{0.25cm}
-\item Interpolate and continue.
 \end{itemize}
 }
 
@@ -215,9 +241,11 @@
 \vspace{0.25cm}
 \item Refining too often is computationally expensive and negates any benefits from adaptive mesh.
 \vspace{0.25cm}
+\item In dynamic refinement methods, positions of nodes are functions of time.
+\vspace{0.25cm}
 \item May be possible to use a priori information to generate functions for the wave to travel along. For example the characteristic curves along which the solution is constant. For a simple moving wave this tracks positions on the wave-front.
 \vspace{0.25cm}
-\item Requires specific a priori knowledge on the problem, not always possible to derive characteristic curves.
+\item Requires specific a priori knowledge of the problem, not always possible to derive characteristic curves.
 \end{itemize}
 }
 
@@ -229,6 +257,18 @@
 }
 
 \section*{}
+\frame{\frametitle{Summary}
+\begin{itemize}
+\item Problems arise when uniform grid used in Method of Lines.
+\vspace{0.25cm}
+\item Solution: adapt the grid to account for regions of high activity.
+\vspace{0.25cm}
+\item Static adaptation: refine the grid at discrete time steps.
+\vspace{0.25cm}
+\item Dynamic adaptation: positions of nodes are functions of time.
+\end{itemize}
+}
+
 \frame{
     \begin{center}
         \huge
