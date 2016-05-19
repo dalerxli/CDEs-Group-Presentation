@@ -69,7 +69,7 @@ errorMesh=zeros(length(t0:dt:tf),jmax);
    
 % initial situation
 Fig1=figure(1);
-set(Fig1, 'Position', [100 100 1000 600])
+set(Fig1, 'Position', [100 100 1000 550])
 
 subplot('position',[0.1, 0.3, 0.85, 0.65]);
 plot(x(:,1),u(1,:),'.b-','markersize', 15);

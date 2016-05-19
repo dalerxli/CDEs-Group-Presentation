@@ -1,4 +1,5 @@
 \documentclass[compress,blue]{beamer}
+\usepackage{etex}
 \mode<presentation>
 
 \usetheme{Copenhagen}
@@ -55,6 +56,8 @@
 \usepackage{multimedia}
 \usepackage{hyperref}
 \usepackage{setspace}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
 
 \usepackage{animate}
 
@@ -103,9 +106,13 @@
 \subsection{Method of lines used to solve Burgers' equation}
 \frame{\frametitle{Method of Lines - Burgers' Equation}
 \begin{itemize}
+<<<<<<< HEAD
+	\item Bad approximation in regions of high spatial activity when grid is uniform. Here we use 201 nodes.
+=======
 \item Bad approximation in regions of high spatial activity when grid is uniform.
+>>>>>>> origin/master
 \end{itemize}
-\centering \includegraphics[scale=.25]{images/dynam_burgers_1.png}
+\animategraphics[controls, width=1\linewidth]{1}{images/MoL_burgers_}{0}{10}
 }
 
 \subsection{Motivation}
@@ -113,12 +120,21 @@
 \textbf{Mesh adaptation}
 \vspace{0.25cm}
 \begin{itemize}
+<<<<<<< HEAD
+	\item Want to adapt the spatial mesh such that nodes are efficiently placed.
+	\begin{itemize}
+		\item Static moving mesh.
+		\item Static grid refinement.
+		\item Dynamic mesh.
+	\end{itemize}
+=======
     \item Want to adapt the spatial mesh such that nodes are efficiently placed.
             \begin{itemize}
                 \item Static moving mesh.
                 \item Static grid refinement.
                 \item Dynamic mesh.
             \end{itemize}
+>>>>>>> origin/master
 \end{itemize}
 }
 
@@ -164,33 +180,64 @@
 }
 
 \frame{\frametitle{Moving Mesh - KDV Equation Example 1}
-\begin{itemize}
-\item Time step = 10
-\end{itemize}
+\begin{tabular}{c|c|c}
+	\hline
+	\rule{0pt}{2ex} Mesh Adaptions & \# of Mesh Nodes & Computation Time \\
+	\hline
+	\rule{0pt}{2ex} 10 & 151 & 8.9 sec \\
+\end{tabular}
 \animategraphics[controls, width=1\linewidth]{1}{images/static_moving_KDV_dt10_}{0}{10}
 }
 
+\frame{\frametitle{Moving Mesh - KDV Equation Example 1 Error}
+\centering \includegraphics[height=0.8\textheight]{images/static_moving_KDV_error_dt10.png}
+}
+
 \frame{\frametitle{Moving Mesh - KDV Equation Example 2}
-\begin{itemize}
-\item Time step = 2
-\end{itemize}
+\begin{tabular}{c|c|c}
+	\hline
+	\rule{0pt}{2ex} Mesh Adaptions & \# of Mesh Nodes & Computation Time \\
+	\hline
+	\rule{0pt}{2ex} 50 & 151 & 19.6 sec \\
+\end{tabular}
 \animategraphics[controls, width=1\linewidth]{5}{images/static_moving_KDV_dt2_}{0}{50}
 }
 
+\frame{\frametitle{Moving Mesh - KDV Equation Example 2 Error}
+\centering \includegraphics[height=0.8\textheight]{images/static_moving_KDV_error_dt2.png}
+}
+
 \frame{\frametitle{Moving Mesh - Burgers' Equation Example 1}
-\begin{itemize}
-\item Time step = 0.1
-\end{itemize}
+\begin{tabular}{c|c|c}
+	\hline
+	\rule{0pt}{2ex} Mesh Adaptions & \# of Mesh Nodes & Computation Time \\
+	\hline
+	\rule{0pt}{2ex} 10 & 375 & 5.8 sec \\
+\end{tabular}
 \animategraphics[controls, width=1\linewidth]{1}{images/static_moving_burgers_dt01_}{0}{10}
 }
 
+\frame{\frametitle{Moving Mesh - Burgers' Equation Example 1 Error}
+\centering \includegraphics[height=0.8\textheight]{images/static_moving_burgers_error_dt01.png}
+}
+
 \frame{\frametitle{Moving Mesh - Burgers' Equation Example 2}
-\begin{itemize}
-\item Time step = 0.01
-\end{itemize}
+\begin{tabular}{c|c|c}
+	\hline
+	\rule{0pt}{2ex} Mesh Adaptions & \# of Mesh Nodes & Computation Time \\
+	\hline
+	\rule{0pt}{2ex} 100 & 251 & 36.1 sec \\
+\end{tabular}
 \animategraphics[controls, width=1\linewidth]{10}{images/static_moving_burgers_dt001_}{0}{100}
 }
 
+<<<<<<< HEAD
+\frame{\frametitle{Moving Mesh - Burgers' Equation Example 2 Error}
+\centering \includegraphics[height=0.8\textheight]{images/static_moving_burgers_error_dt001.png}
+}
+
+=======
+>>>>>>> origin/master
 %\subsection{Mesh Refinement theory and examples}
 %\frame{\frametitle{Mesh Refinement}
 %\begin{itemize}
@@ -205,6 +252,19 @@
 \subsection{Mesh Refinement theory and examples}
 \frame{\frametitle{Mesh Refinement}
 \begin{itemize}
+<<<<<<< HEAD
+	\item Just as in moving mesh, the mesh is updated at set intervals.
+	\vspace{0.25cm}
+	\item Procedure for each mesh adaption:
+		\begin{itemize}
+			\item Reset to uniform base grid.
+			\item Evaluate monitor function between each pair of nodes.
+			\item If threshold exceeded, add nodes with uniform spacing
+			\item If below threshold, remove some nodes.
+			\item Interpolate and repeat.
+		\end{itemize}
+	\vspace{0.25cm}
+=======
 \item Just as in moving mesh, the mesh is updated at set intervals.
 \vspace{0.25cm}
 \item Procedure at each ``pause":
@@ -216,27 +276,77 @@
 		\item Interpolate and repeat.
 	\end{itemize}
 \vspace{0.25cm}
+>>>>>>> origin/master
 \end{itemize}
+\vspace{0.25cm}
+\begin{center}
+	\begin{tikzpicture}
+		\uncover<2->{
+		\foreach \x in  {-4,-3,-2,-1,0,1,2,3,4} 
+		\draw [thick] (\x,0) circle [radius=0.08];}
+		\uncover<3->{
+		\draw [fill,color=Blue] (-3.5,0) circle [radius=0.05];
+		\foreach \x in  {-2.66,-2.33} 
+		\draw [fill,color=Blue] (\x,0) circle [radius=0.05];
+		\foreach \x in  {-1.75,-1.5,-1.25} 
+		\draw [fill,color=Blue] (\x,0) circle [radius=0.05];
+		\foreach \x in  {-0.875,-0.75,-0.625,-0.5,-0.375,-0.25,-0.125} 
+		\draw [fill,color=Blue] (\x,0) circle [radius=0.05];
+		\foreach \x in  {0.25,0.5,0.75} 
+		\draw [fill,color=Blue] (\x,0) circle [radius=0.05];
+		\foreach \x in  {1.33,1.66} 
+		\draw [fill,color=Blue] (\x,0) circle [radius=0.05];
+		\draw [fill,color=Blue] (2.5,0) circle [radius=0.05];}
+	\end{tikzpicture}
+\end{center}
 }
 
 \frame{\frametitle{Mesh Refinement - Burgers' Equation Example 1}
-\begin{itemize}
-\item Time step = 0.1
-\end{itemize}
+\begin{tabular}{c|c|c}
+	\hline
+	\rule{0pt}{2ex} Mesh Adaptions & \# of Mesh Nodes & Computation Time \\
+	\hline
+	\rule{0pt}{2ex} 10 & $\approx$ 268.5 & 6.0 sec \\
+\end{tabular}
 \animategraphics[controls, width=1\linewidth]{1}{images/static_adapt_burgers_dt01_}{0}{10}
 }
 
+\frame{\frametitle{Mesh Refinement - Burgers' Equation Example 1 Error}
+\centering \includegraphics[height=0.8\textheight]{images/static_adapt_burgers_error_dt01.png}
+}
+
 \frame{\frametitle{Mesh Refinement - Burgers' Equation Example 2}
-\begin{itemize}
-\item Time step = 0.01
-\end{itemize}
+\begin{tabular}{c|c|c}
+	\hline
+	\rule{0pt}{2ex} Mesh Adaption & \# of Mesh Nodes & Computation Time \\
+	\hline
+	\rule{0pt}{2ex} 100 & $\approx$ 152.5 & 41.2 sec \\
+\end{tabular}
 \animategraphics[controls, width=1\linewidth]{10}{images/static_adapt_burgers_dt001_}{0}{100}
 }
 
+<<<<<<< HEAD
+\frame{\frametitle{Mesh Refinement - Burgers' Equation Example 2 Error}
+\centering \includegraphics[height=0.8\textheight]{images/static_adapt_burgers_error_dt001.png}
+}
+
+=======
+>>>>>>> origin/master
 \section{Dynamic Method}
 \subsection{Dynamic Method}
 \frame{\frametitle{Dynamic Method}
 \begin{itemize}
+<<<<<<< HEAD
+	\item Refining the grid at set time steps can cause the mesh to lag behind the moving solution.
+	\vspace{0.25cm}
+	\item Refining too often is computationally expensive and negates any benefits from adaptive mesh.
+	\vspace{0.25cm}
+	\item In dynamic refinement methods, positions of nodes are functions of time.
+	\vspace{0.25cm}
+	\item May be possible to use a priori information to generate functions for the wave to travel along. For example the characteristic curves along which the solution is constant. For a simple moving wave this tracks positions on the wave-front.
+	\vspace{0.25cm}
+	\item Requires specific a priori knowledge of the problem, not always possible to derive characteristic curves.
+=======
 \item Refining the grid at set time steps can cause the mesh to lag behind the moving solution.
 \vspace{0.25cm}
 \item Refining too often is computationally expensive and negates any benefits from adaptive mesh.
@@ -246,19 +356,32 @@
 \item May be possible to use a priori information to generate functions for the wave to travel along. For example the characteristic curves along which the solution is constant. For a simple moving wave this tracks positions on the wave-front.
 \vspace{0.25cm}
 \item Requires specific a priori knowledge of the problem, not always possible to derive characteristic curves.
+>>>>>>> origin/master
 \end{itemize}
 }
 
 \frame{\frametitle{Dynamic Method - Burgers' Equation Example}
-\begin{itemize}
-\item Number of mesh points = 51
-\end{itemize}
+\begin{tabular}{c|c|c}
+	\hline
+	\rule{0pt}{2ex} Mesh Adaptions & \# of Mesh Points & Computation Time \\
+	\hline
+	\rule{0pt}{2ex} 10 & 51 & 15.4 sec \\
+\end{tabular}
 \animategraphics[controls, width=1\linewidth]{1}{images/dynam_burgers_}{1}{11}
 }
 
 \section*{}
 \frame{\frametitle{Summary}
 \begin{itemize}
+<<<<<<< HEAD
+	\item Problems arise when uniform grid used in Method of Lines.
+	\vspace{0.25cm}
+	\item Solution: adapt the grid to account for regions of high activity.
+	\vspace{0.25cm}
+	\item Static adaptation: refine the grid at discrete time steps.
+	\vspace{0.25cm}
+	\item Dynamic adaptation: positions of nodes are functions of time.
+=======
 \item Problems arise when uniform grid used in Method of Lines.
 \vspace{0.25cm}
 \item Solution: adapt the grid to account for regions of high activity.
@@ -266,6 +389,7 @@
 \item Static adaptation: refine the grid at discrete time steps.
 \vspace{0.25cm}
 \item Dynamic adaptation: positions of nodes are functions of time.
+>>>>>>> origin/master
 \end{itemize}
 }
 

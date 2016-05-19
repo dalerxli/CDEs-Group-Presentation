@@ -4,7 +4,7 @@ clear;
 tic
 
 %use local_refine function(=1) or agereg function(=0)?
-use_local_refine=0;
+use_local_refine=1;
 
 %set default axes properties
 set(0,'DefaultAxesFontSize', 14,'DefaultAxesFontWeight','bold','DefaultAxesLineWidth',1.5);
@@ -58,7 +58,7 @@ tout = t0;
 maxsteps = 5;
 % initial situation
 Fig1=figure(1);
-set(Fig1, 'Position', [100 100 1000 600])
+set(Fig1, 'Position', [100 100 1000 550])
 subplot('position',[0.1, 0.3, 0.85, 0.65]);
 plot(z,x,'.b-','MarkerSize',15);
 ylabel('u(x,t)');
@@ -85,18 +85,18 @@ set(gca,'XTickLabel','');
 hold off
 
 %save plot
-% plot_count=0;
-% if use_local_refine == 0
-%     tstep=num2str(dt);
-%     tstep(tstep=='.')=[];
-%     print('-painters','-dpng',sprintf(strcat('imagesburg\\static_moving_burgers_dt',...
-%         tstep,'_%d'),plot_count))
-% else
-%     tstep=num2str(dt);
-%     tstep(tstep=='.')=[];
-%     print('-painters','-dpng',sprintf(strcat('imagesburg\\static_adapt_burgers_dt',...
-%         tstep,'_%d'),plot_count))
-% end
+plot_count=0;
+if use_local_refine == 0
+    tstep=num2str(dt);
+    tstep(tstep=='.')=[];
+    print('-painters','-dpng',sprintf(strcat('imagesburg\\static_moving_burgers_dt',...
+        tstep,'_%d'),plot_count))
+else
+    tstep=num2str(dt);
+    tstep(tstep=='.')=[];
+    print('-painters','-dpng',sprintf(strcat('imagesburg\\static_adapt_burgers_dt',...
+        tstep,'_%d'),plot_count))
+end
 
 
 % refine the initial grid
@@ -182,18 +182,18 @@ while tk <= tf - 1.e-5
 		tprint = tprint + dt;
         
         %save plot
-%         plot_count = plot_count + 1;
-%         if use_local_refine == 0
-%             tstep=num2str(dt);
-%             tstep(tstep=='.')=[];
-%             print('-painters','-dpng',sprintf(strcat('imagesburg\\static_moving_burgers_dt',...
-%                 tstep,'_%d'),plot_count))
-%         else
-%             tstep=num2str(dt);
-%             tstep(tstep=='.')=[];
-%             print('-painters','-dpng',sprintf(strcat('imagesburg\\static_adapt_burgers_dt',...
-%                 tstep,'_%d'),plot_count))
-%         end
+        plot_count = plot_count + 1;
+        if use_local_refine == 0
+            tstep=num2str(dt);
+            tstep(tstep=='.')=[];
+            print('-painters','-dpng',sprintf(strcat('imagesburg\\static_moving_burgers_dt',...
+                tstep,'_%d'),plot_count))
+        else
+            tstep=num2str(dt);
+            tstep(tstep=='.')=[];
+            print('-painters','-dpng',sprintf(strcat('imagesburg\\static_adapt_burgers_dt',...
+                tstep,'_%d'),plot_count))
+        end
 		
         
     end
@@ -202,7 +202,25 @@ while tk <= tf - 1.e-5
 	% compute a new differentiation matrix
 	D1 = three_point_centered_D1(z);
 end
-%output highest error
+% plot and output highest error
+figure(2)
+plot(tout(2:end),error,'.b-','markersize',15)
+xlabel('t');
+ylabel('error');
+grid on
+% save error plot
+if use_local_refine == 0
+    tstep=num2str(dt);
+    tstep(tstep=='.')=[];
+    print('-painters','-dpng',sprintf(strcat(...
+        'imagesburg\\static_moving_burgers_error_dt',tstep)))
+else
+    tstep=num2str(dt);
+    tstep(tstep=='.')=[];
+    print('-painters','-dpng',sprintf(strcat(...
+        'imagesburg\\static_adapt_burgers_error_dt',tstep)))
+end
+
 fprintf('max grid error across all time steps = %6.4f\n',max(error));
 % read the stopwatch timer
 tcpu = toc; %output computation ttime

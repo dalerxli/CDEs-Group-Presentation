@@ -64,7 +64,7 @@ D1 = three_point_centered_D1(z);
 % call to ODE solver
 t0 = 0;
 tf = 100;
-dt = 10;
+dt = 2;
 yout = x;
 zout = z;
 nzout= [nzout; nz];
@@ -74,7 +74,7 @@ tout = t0;
 maxsteps = 10;
 % initial situation
 Fig1=figure(1);
-set(Fig1, 'Position', [100 100 1000 600])
+set(Fig1, 'Position', [100 100 1000 550])
 subplot('position',[0.1, 0.3, 0.85, 0.65]);
 plot(z,x,'.b-','MarkerSize',15);
 ylabel('u(x,t)');
@@ -98,12 +98,12 @@ set(gca,'XTickLabel','');
 hold off
 
 %save plot
-% plot_count=0;
-% if use_local_refine == 0
-%     print('-painters','-dpng',sprintf('imagesKDV\\static_moving_KDV_dt%d_%d',dt,plot_count))
-% else
-%     print('-painters','-dpng',sprintf('imagesKDV\\static_adapt_KDV_dt%d_%d',dt,plot_count))
-% end
+plot_count=0;
+if use_local_refine == 0
+    print('-painters','-dpng',sprintf('imagesKDV\\static_moving_KDV_dt%d_%d',dt,plot_count))
+else
+    print('-painters','-dpng',sprintf('imagesKDV\\static_adapt_KDV_dt%d_%d',dt,plot_count))
+end
 
 tk = t0;
 tspan= [t0, tf];
@@ -168,19 +168,31 @@ while tk <= tf - 1.e-5
         tprint = tprint + dt;
         
         %save plot
-%         plot_count = plot_count + 1;
-%         if use_local_refine == 0
-%             print('-painters','-dpng',sprintf('imagesKDV\\static_moving_KDV_dt%d_%d',dt,plot_count))
-%         else
-%             print('-painters','-dpng',sprintf('imagesKDV\\static_adapt_KDV_dt%d_%d',dt,plot_count))
-%         end
+        plot_count = plot_count + 1;
+        if use_local_refine == 0
+            print('-painters','-dpng',sprintf('imagesKDV\\static_moving_KDV_dt%d_%d',dt,plot_count))
+        else
+            print('-painters','-dpng',sprintf('imagesKDV\\static_adapt_KDV_dt%d_%d',dt,plot_count))
+        end
 		
     end
     error=[error max(abs(uexact-x))];
 	% compute a new differentiation matrix
 	D1 = three_point_centered_D1(z);
 end
-%output highest error
+% plot and output highest error
+figure(2)
+plot(tout(2:end),error,'b--o')
+xlabel('t');
+ylabel('error');
+grid on
+% save error plot
+if use_local_refine == 0
+    print('-painters','-dpng',sprintf('imagesKDV\\static_moving_KDV_error_dt%d',dt))
+else
+    print('-painters','-dpng',sprintf('imagesKDV\\static_adapt_KDV_error_dt%d',dt))
+end
+
 fprintf('maximum grid error across all time steps = %6.4f\n',max(error));
 % read the stopwatch timer
 tcpu = toc;

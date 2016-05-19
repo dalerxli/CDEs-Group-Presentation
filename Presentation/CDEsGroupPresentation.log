@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  19 MAY 2016 15:57
+=======
 This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.8.28)  18 MAY 2016 22:13
+>>>>>>> origin/master
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -699,8 +703,17 @@ Package: beamerouterthemedefault 2012/12/19  (rcs-revision 1686da3db3c9)
 ture.sty
 Package: beamercolorthemestructure 2010/06/17  (rcs-revision d02a7cf4d8ae)
 ))
+<<<<<<< HEAD
+(/usr/local/texlive/2013/texmf-dist/tex/latex/etex-pkg/etex.sty
+Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
+\et@xins=\count153
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/beamer/themes/theme/beamerthemeCo
+penhagen.sty
+=======
 (c:/texlive/2015/texmf-dist/tex/latex/beamer/themes/theme/beamerthemeCopenhagen
 .sty
+>>>>>>> origin/master
 Package: beamerthemeCopenhagen 2010/06/17  (rcs-revision d02a7cf4d8ae)
 
 (c:/texlive/2015/texmf-dist/tex/latex/beamer/themes/outer/beamerouterthemesplit
@@ -765,6 +778,19 @@ Loading kernel: messages; fonts; allocations: state,
 \zerodotbox@=\box54
 \almostz@=\dimen212
  direction,
+<<<<<<< HEAD
+\d@X=\dimen210
+\d@Y=\dimen211
+\K@=\count154
+\KK@=\count155
+\Direction=\count156
+\K@dXdY=\dimen212
+\K@dYdX=\dimen213
+\xyread@=\read2
+\xywrite@=\write5
+\csp@=\count157
+\quotPTK@=\dimen214
+=======
 \d@X=\dimen213
 \d@Y=\dimen214
 \K@=\count153
@@ -776,6 +802,7 @@ Loading kernel: messages; fonts; allocations: state,
 \xywrite@=\write5
 \csp@=\count156
 \quotPTK@=\dimen217
+>>>>>>> origin/master
 
 utility macros; pictures: \xy, positions,
 \swaptoks@@=\toks45
@@ -791,8 +818,13 @@ Package: xy 2013/10/06 Xy-pic version 3.8.9
  Xy-pic option: All features v.3.8
 (c:/texlive/2015/texmf-dist/tex/generic/xypic/xycurve.tex
  Xy-pic option: Curve and Spline extension v.3.12 curve,
+<<<<<<< HEAD
+\crv@cnt@=\count158
+\crvpts@=\toks44
+=======
 \crv@cnt@=\count157
 \crvpts@=\toks47
+>>>>>>> origin/master
 \splinebox@=\box56
 \splineval@=\dimen218
 \splinedepth@=\dimen219
@@ -817,6 +849,15 @@ Package: xy 2013/10/06 Xy-pic version 3.8.9
  Xy-pic option: Colour extension v.3.11 loaded)
 (c:/texlive/2015/texmf-dist/tex/generic/xypic/xymatrix.tex
  Xy-pic option: Matrix feature v.3.14
+<<<<<<< HEAD
+\Row=\count159
+\Col=\count160
+\queue@=\toks45
+\queue@@=\toks46
+\qcount@=\count161
+\qcount@@=\count162
+\matrixsize@=\count163
+=======
 \Row=\count158
 \Col=\count159
 \queue@=\toks48
@@ -824,6 +865,7 @@ Package: xy 2013/10/06 Xy-pic version 3.8.9
 \qcount@=\count160
 \qcount@@=\count161
 \matrixsize@=\count162
+>>>>>>> origin/master
  loaded)
 (c:/texlive/2015/texmf-dist/tex/generic/xypic/xyarrow.tex
  Xy-pic option: Arrow and Path feature v.3.9 path, \ar, loaded)
@@ -847,6 +889,87 @@ Xy-pic pdf driver: `rotate' extension support
 elliptical arcs, loaded)
 (c:/texlive/2015/texmf-dist/tex/latex/beamer/multimedia/multimedia.sty
 Package: multimedia 2012/05/02 ver 0.02
+<<<<<<< HEAD
+\mm@movie=\count164
+) (/usr/local/texlive/2013/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+Package: pgf 2008/01/15 v2.10 (rcs-revision 1.12)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex
+File: pgfmoduleshapes.code.tex 2010/09/09  (rcs-revision 1.13)
+\pgfnodeparttextbox=\box57
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex
+File: pgfmoduleplot.code.tex 2010/10/22  (rcs-revision 1.8)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty
+Package: pgfcomp-version-0-65 2007/07/03 v2.10 (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen221
+\pgf@nodesepend=\dimen222
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty
+Package: pgfcomp-version-1-18 2007/07/23 v2.10 (rcs-revision 1.1)
+))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2010/03/23 v2.10 (rcs-revision 1.18)
+\pgffor@iter=\dimen223
+\pgffor@skip=\dimen224
+\pgffor@stack=\toks47
+\pgffor@toks=\toks48
+))
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+Package: tikz 2010/10/13 v2.10 (rcs-revision 1.76)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex
+File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
+\pgf@plot@mark@count=\count165
+\pgfplotmarksize=\dimen225
+)
+\tikz@lastx=\dimen226
+\tikz@lasty=\dimen227
+\tikz@lastxsaved=\dimen228
+\tikz@lastysaved=\dimen229
+\tikzleveldistance=\dimen230
+\tikzsiblingdistance=\dimen231
+\tikz@figbox=\box58
+\tikz@tempbox=\box59
+\tikztreelevel=\count166
+\tikznumberofchildren=\count167
+\tikznumberofcurrentchild=\count168
+\tikz@fig@count=\count169
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex
+File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
+\pgfmatrixcurrentrow=\count170
+\pgfmatrixcurrentcolumn=\count171
+\pgf@matrix@numberofcolumns=\count172
+)
+\tikz@expandcount=\count173
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v2.10 (rcs-revision 1.2)
+)))
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2008/10/06 v2.10 (rcs-revision 1.7)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/animate/animate.sty
+Package: animate 2013/04/23 PDF animations from files and inline graphics
+=======
 \mm@movie=\count163
 )
 (c:/texlive/2015/texmf-dist/tex/latex/setspace/setspace.sty
@@ -854,6 +977,7 @@ Package: setspace 2011/12/19 v6.7a set line spacing
 )
 (c:/texlive/2015/texmf-dist/tex/latex/animate/animate.sty
 Package: animate 2015/07/18 PDF animations from files and inline graphics
+>>>>>>> origin/master
 
 (c:/texlive/2015/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
@@ -861,6 +985,19 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 (c:/texlive/2015/texmf-dist/tex/latex/oberdiek/ifdraft.sty
 Package: ifdraft 2008/08/11 v1.3 Detect class options draft and final (HO)
 )
+<<<<<<< HEAD
+(/usr/local/texlive/2013/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count174
+\calc@Bcount=\count175
+\calc@Adimen=\dimen232
+\calc@Bdimen=\dimen233
+\calc@Askip=\skip57
+\calc@Bskip=\skip58
+LaTeX Info: Redefining \setlength on input line 76.
+LaTeX Info: Redefining \addtolength on input line 77.
+\calc@Ccount=\count176
+=======
 (c:/texlive/2015/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count164
@@ -872,6 +1009,7 @@ Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count166
+>>>>>>> origin/master
 \calc@Cskip=\skip59
 )
 (c:/texlive/2015/texmf-dist/tex/latex/oberdiek/atenddvi.sty
@@ -895,6 +1033,52 @@ Package zref Info: New property list: LastPage on input line 55.
 ))
 (c:/texlive/2015/texmf-dist/tex/latex/animate/animfp.sty
 Package: animfp 2009/07/23 fixed point addition for animate.sty
+<<<<<<< HEAD
+\afp@xs=\count177
+\afp@xia=\count178
+\afp@xib=\count179
+\afp@xfa=\count180
+\afp@xfb=\count181
+\afp@rega=\count182
+\afp@regb=\count183
+\afp@regs=\count184
+)
+(/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count185
+Normal \dimen register pool exhausted, switching to extended pool.
+\scratchdimen=\dimen256
+\scratchbox=\box60
+\nofMPsegments=\count186
+\nofMParguments=\count187
+\everyMPshowfont=\toks49
+\MPscratchCnt=\count188
+\MPscratchDim=\dimen257
+\MPnumerator=\count189
+\makeMPintoPDFobject=\count190
+\everyMPtoPDFconversion=\toks50
+)
+\@anim@@fields=\count191
+\@anim@@ocgs=\count192
+\@anim@@offocgs=\count193
+\@anim@box=\box61
+\@anim@tmpdima=\dimen258
+\@anim@tmpdimb=\dimen259
+\@anim@num=\count194
+\@anim@curframe=\count195
+\@anim@curframe@zb=\count196
+\@anim@resize=\count197
+\@anim@skipfram=\count198
+\@anim@mulframecnt=\count199
+\@anim@@tmlnfile=\read3
+\@anim@tmpcnt=\count200
+\c@@anim@ltxcnt=\count201
+\@anim@curlayer=\count202
+\@anim@lineno=\count203
+\@anim@curfield=\count204
+\@anim@begin=\toks51
+\@anim@end=\toks52
+=======
 \afp@xs=\count168
 \afp@xia=\count169
 \afp@xib=\count170
@@ -936,23 +1120,24 @@ Package: animfp 2009/07/23 fixed point addition for animate.sty
 \@anim@lineno=\count192
 \@anim@curfield=\count193
 \@anim@@resizeflags=\count194
+>>>>>>> origin/master
 ) (./CDEsGroupPresentation.aux)
 \openout1 = `CDEsGroupPresentation.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1004,8 +1189,13 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 ABD: EveryShipout initializing macros
+<<<<<<< HEAD
+\AtBeginShipoutBox=\box62
+Package hyperref Info: Link coloring OFF on input line 71.
+=======
 \AtBeginShipoutBox=\box60
 Package hyperref Info: Link coloring OFF on input line 68.
+>>>>>>> origin/master
 
 (c:/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1013,57 +1203,60 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (c:/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count195
+\c@section@level=\count205
 )
-LaTeX Info: Redefining \ref on input line 68.
-LaTeX Info: Redefining \pageref on input line 68.
-LaTeX Info: Redefining \nameref on input line 68.
+LaTeX Info: Redefining \ref on input line 71.
+LaTeX Info: Redefining \pageref on input line 71.
+LaTeX Info: Redefining \nameref on input line 71.
 
 (./CDEsGroupPresentation.out) (./CDEsGroupPresentation.out)
 \@outlinefile=\write6
 \openout6 = `CDEsGroupPresentation.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 68.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 71.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 68.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 71.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 68.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 68.
+(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 71.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 71.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 68.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 71.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 68.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 68.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 71.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 71.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 68.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 71.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 68.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 68.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 71.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 71.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 68.
+(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 71.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 68.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 68.
+(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 71.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 71.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 68.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 71.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 68.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 71.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 68.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 71.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 68.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 71.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 68.
+(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 71.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 68.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 71.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 68.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 71.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 68.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 71.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+<<<<<<< HEAD
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 71.
+=======
 (Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 68.
 LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 68.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
@@ -1075,6 +1268,7 @@ LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on inp
 ut line 68.
+>>>>>>> origin/master
 
 (c:/texlive/2015/texmf-dist/tex/latex/beamer/translator/dicts/translator-basic-
 dictionary/translator-basic-dictionary-English.dict
@@ -1100,17 +1294,20 @@ Dictionary: translator-numbers-dictionary, Language: English
 m-dictionary/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \includegraphics on input line 68.
-LaTeX Font Info:    Try loading font information for U+msa on input line 68.
+LaTeX Info: Redefining \includegraphics on input line 71.
+LaTeX Font Info:    Try loading font information for U+msa on input line 71.
 
 (c:/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 68.
+LaTeX Font Info:    Try loading font information for U+msb on input line 71.
 
 (c:/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+<<<<<<< HEAD
+Package xypdf Info: Line width: 0.43799pt on input line 71.
+=======
 LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input 
 line 68.
 
@@ -1119,11 +1316,12 @@ File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 )
 Package xypdf Info: Line width: 0.43799pt on input line 68.
+>>>>>>> origin/master
 
 (./CDEsGroupPresentation.nav)
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 70.
+(Font)              size <5> substituted on input line 73.
 
 [1{c:/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
@@ -1133,6 +1331,43 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 ] [3
 
 ] [4
+<<<<<<< HEAD
+
+] <./images/MoL_burgers_0.png (PNG copy)> <./images/MoL_burgers_1.png (PNG copy
+)> <./images/MoL_burgers_2.png (PNG copy)> <./images/MoL_burgers_3.png (PNG cop
+y)> <./images/MoL_burgers_4.png (PNG copy)> <./images/MoL_burgers_5.png (PNG co
+py)> <./images/MoL_burgers_6.png (PNG copy)> <./images/MoL_burgers_7.png (PNG c
+opy)> <./images/MoL_burgers_8.png (PNG copy)> <./images/MoL_burgers_9.png (PNG 
+copy)> <./images/MoL_burgers_10.png (PNG copy)>
+Overfull \vbox (4.14317pt too high) detected at line 112
+ []
+
+[5
+
+] [6
+
+] [7
+
+] [8
+
+] <images/mesh_uniform.png, id=685, 422.32782pt x 316.18124pt>
+File: images/mesh_uniform.png Graphic file (type png)
+
+<use images/mesh_uniform.png>
+Package pdftex.def Info: images/mesh_uniform.png used on input line 155.
+(pdftex.def)             Requested size: 147.81694pt x 110.66508pt.
+
+<images/mesh_arclength.png, id=686, 422.32782pt x 316.18124pt>
+File: images/mesh_arclength.png Graphic file (type png)
+
+<use images/mesh_arclength.png>
+Package pdftex.def Info: images/mesh_arclength.png used on input line 155.
+(pdftex.def)             Requested size: 147.81694pt x 110.66508pt.
+ [9
+
+ <./images/mesh_uniform.png (PNG copy)> <./images/mesh_arclength.png (PNG copy)
+>] [10
+=======
 
 ]
 <images/dynam_burgers_1.png, id=303, 753.0534pt x 451.9284pt>
@@ -1165,6 +1400,7 @@ Package pdftex.def Info: images/mesh_arclength.png used on input line 143.
 
  <./images/mesh_uniform.png (PNG copy)> <./images/mesh_arclength.png (PNG copy)
 >] [9
+>>>>>>> origin/master
 
 ] <./images/static_moving_KDV_dt10_0.png (PNG copy)> <./images/static_moving_KD
 V_dt10_1.png (PNG copy)> <./images/static_moving_KDV_dt10_2.png (PNG copy)> <./
@@ -1173,6 +1409,175 @@ images/static_moving_KDV_dt10_3.png (PNG copy)> <./images/static_moving_KDV_dt1
 s/static_moving_KDV_dt10_6.png (PNG copy)> <./images/static_moving_KDV_dt10_7.p
 ng (PNG copy)> <./images/static_moving_KDV_dt10_8.png (PNG copy)> <./images/sta
 tic_moving_KDV_dt10_9.png (PNG copy)> <./images/static_moving_KDV_dt10_10.png (
+<<<<<<< HEAD
+PNG copy)> [11
+
+]
+<images/static_moving_KDV_error_dt10.png, id=931, 421.575pt x 316.0608pt>
+File: images/static_moving_KDV_error_dt10.png Graphic file (type png)
+
+<use images/static_moving_KDV_error_dt10.png>
+Package pdftex.def Info: images/static_moving_KDV_error_dt10.png used on input 
+line 181.
+(pdftex.def)             Requested size: 259.81708pt x 194.78479pt.
+ [12
+
+ <./images/static_moving_KDV_error_dt10.png (PNG copy)>] <./images/static_movin
+g_KDV_dt2_0.png (PNG copy)> <./images/static_moving_KDV_dt2_1.png (PNG copy)> <
+./images/static_moving_KDV_dt2_2.png (PNG copy)> <./images/static_moving_KDV_dt
+2_3.png (PNG copy)> <./images/static_moving_KDV_dt2_4.png (PNG copy)> <./images
+/static_moving_KDV_dt2_5.png (PNG copy)> <./images/static_moving_KDV_dt2_6.png 
+(PNG copy)> <./images/static_moving_KDV_dt2_7.png (PNG copy)> <./images/static_
+moving_KDV_dt2_8.png (PNG copy)> <./images/static_moving_KDV_dt2_9.png (PNG cop
+y)> <./images/static_moving_KDV_dt2_10.png (PNG copy)> <./images/static_moving_
+KDV_dt2_11.png (PNG copy)> <./images/static_moving_KDV_dt2_12.png (PNG copy)> <
+./images/static_moving_KDV_dt2_13.png (PNG copy)> <./images/static_moving_KDV_d
+t2_14.png (PNG copy)> <./images/static_moving_KDV_dt2_15.png (PNG copy)> <./ima
+ges/static_moving_KDV_dt2_16.png (PNG copy)> <./images/static_moving_KDV_dt2_17
+.png (PNG copy)> <./images/static_moving_KDV_dt2_18.png (PNG copy)> <./images/s
+tatic_moving_KDV_dt2_19.png (PNG copy)> <./images/static_moving_KDV_dt2_20.png 
+(PNG copy)> <./images/static_moving_KDV_dt2_21.png (PNG copy)> <./images/static
+_moving_KDV_dt2_22.png (PNG copy)> <./images/static_moving_KDV_dt2_23.png (PNG 
+copy)> <./images/static_moving_KDV_dt2_24.png (PNG copy)> <./images/static_movi
+ng_KDV_dt2_25.png (PNG copy)> <./images/static_moving_KDV_dt2_26.png (PNG copy)
+> <./images/static_moving_KDV_dt2_27.png (PNG copy)> <./images/static_moving_KD
+V_dt2_28.png (PNG copy)> <./images/static_moving_KDV_dt2_29.png (PNG copy)> <./
+images/static_moving_KDV_dt2_30.png (PNG copy)> <./images/static_moving_KDV_dt2
+_31.png (PNG copy)> <./images/static_moving_KDV_dt2_32.png (PNG copy)> <./image
+s/static_moving_KDV_dt2_33.png (PNG copy)> <./images/static_moving_KDV_dt2_34.p
+ng (PNG copy)> <./images/static_moving_KDV_dt2_35.png (PNG copy)> <./images/sta
+tic_moving_KDV_dt2_36.png (PNG copy)> <./images/static_moving_KDV_dt2_37.png (P
+NG copy)> <./images/static_moving_KDV_dt2_38.png (PNG copy)> <./images/static_m
+oving_KDV_dt2_39.png (PNG copy)> <./images/static_moving_KDV_dt2_40.png (PNG co
+py)> <./images/static_moving_KDV_dt2_41.png (PNG copy)> <./images/static_moving
+_KDV_dt2_42.png (PNG copy)> <./images/static_moving_KDV_dt2_43.png (PNG copy)> 
+<./images/static_moving_KDV_dt2_44.png (PNG copy)> <./images/static_moving_KDV_
+dt2_45.png (PNG copy)> <./images/static_moving_KDV_dt2_46.png (PNG copy)> <./im
+ages/static_moving_KDV_dt2_47.png (PNG copy)> <./images/static_moving_KDV_dt2_4
+8.png (PNG copy)> <./images/static_moving_KDV_dt2_49.png (PNG copy)> <./images/
+static_moving_KDV_dt2_50.png (PNG copy)> [13
+
+]
+<images/static_moving_KDV_error_dt2.png, id=1365, 421.575pt x 316.0608pt>
+File: images/static_moving_KDV_error_dt2.png Graphic file (type png)
+
+<use images/static_moving_KDV_error_dt2.png>
+Package pdftex.def Info: images/static_moving_KDV_error_dt2.png used on input l
+ine 195.
+(pdftex.def)             Requested size: 259.81708pt x 194.78479pt.
+ [14
+
+ <./images/static_moving_KDV_error_dt2.png (PNG copy)>] <./images/static_moving
+_burgers_dt01_0.png (PNG copy)> <./images/static_moving_burgers_dt01_1.png (PNG
+ copy)> <./images/static_moving_burgers_dt01_2.png (PNG copy)> <./images/static
+_moving_burgers_dt01_3.png (PNG copy)> <./images/static_moving_burgers_dt01_4.p
+ng (PNG copy)> <./images/static_moving_burgers_dt01_5.png (PNG copy)> <./images
+/static_moving_burgers_dt01_6.png (PNG copy)> <./images/static_moving_burgers_d
+t01_7.png (PNG copy)> <./images/static_moving_burgers_dt01_8.png (PNG copy)> <.
+/images/static_moving_burgers_dt01_9.png (PNG copy)> <./images/static_moving_bu
+rgers_dt01_10.png (PNG copy)>
+[15
+
+]
+<images/static_moving_burgers_error_dt01.png, id=1556, 421.575pt x 316.0608pt>
+File: images/static_moving_burgers_error_dt01.png Graphic file (type png)
+
+<use images/static_moving_burgers_error_dt01.png>
+Package pdftex.def Info: images/static_moving_burgers_error_dt01.png used on in
+put line 209.
+(pdftex.def)             Requested size: 259.81708pt x 194.78479pt.
+ [16
+
+ <./images/static_moving_burgers_error_dt01.png (PNG copy)>] <./images/static_m
+oving_burgers_dt001_0.png (PNG copy)> <./images/static_moving_burgers_dt001_1.p
+ng (PNG copy)> <./images/static_moving_burgers_dt001_2.png (PNG copy)> <./image
+s/static_moving_burgers_dt001_3.png (PNG copy)> <./images/static_moving_burgers
+_dt001_4.png (PNG copy)> <./images/static_moving_burgers_dt001_5.png (PNG copy)
+> <./images/static_moving_burgers_dt001_6.png (PNG copy)> <./images/static_movi
+ng_burgers_dt001_7.png (PNG copy)> <./images/static_moving_burgers_dt001_8.png 
+(PNG copy)> <./images/static_moving_burgers_dt001_9.png (PNG copy)> <./images/s
+tatic_moving_burgers_dt001_10.png (PNG copy)> <./images/static_moving_burgers_d
+t001_11.png (PNG copy)> <./images/static_moving_burgers_dt001_12.png (PNG copy)
+> <./images/static_moving_burgers_dt001_13.png (PNG copy)> <./images/static_mov
+ing_burgers_dt001_14.png (PNG copy)> <./images/static_moving_burgers_dt001_15.p
+ng (PNG copy)> <./images/static_moving_burgers_dt001_16.png (PNG copy)> <./imag
+es/static_moving_burgers_dt001_17.png (PNG copy)> <./images/static_moving_burge
+rs_dt001_18.png (PNG copy)> <./images/static_moving_burgers_dt001_19.png (PNG c
+opy)> <./images/static_moving_burgers_dt001_20.png (PNG copy)> <./images/static
+_moving_burgers_dt001_21.png (PNG copy)> <./images/static_moving_burgers_dt001_
+22.png (PNG copy)> <./images/static_moving_burgers_dt001_23.png (PNG copy)> <./
+images/static_moving_burgers_dt001_24.png (PNG copy)> <./images/static_moving_b
+urgers_dt001_25.png (PNG copy)> <./images/static_moving_burgers_dt001_26.png (P
+NG copy)> <./images/static_moving_burgers_dt001_27.png (PNG copy)> <./images/st
+atic_moving_burgers_dt001_28.png (PNG copy)> <./images/static_moving_burgers_dt
+001_29.png (PNG copy)> <./images/static_moving_burgers_dt001_30.png (PNG copy)>
+ <./images/static_moving_burgers_dt001_31.png (PNG copy)> <./images/static_movi
+ng_burgers_dt001_32.png (PNG copy)> <./images/static_moving_burgers_dt001_33.pn
+g (PNG copy)> <./images/static_moving_burgers_dt001_34.png (PNG copy)> <./image
+s/static_moving_burgers_dt001_35.png (PNG copy)> <./images/static_moving_burger
+s_dt001_36.png (PNG copy)> <./images/static_moving_burgers_dt001_37.png (PNG co
+py)> <./images/static_moving_burgers_dt001_38.png (PNG copy)> <./images/static_
+moving_burgers_dt001_39.png (PNG copy)> <./images/static_moving_burgers_dt001_4
+0.png (PNG copy)> <./images/static_moving_burgers_dt001_41.png (PNG copy)> <./i
+mages/static_moving_burgers_dt001_42.png (PNG copy)> <./images/static_moving_bu
+rgers_dt001_43.png (PNG copy)> <./images/static_moving_burgers_dt001_44.png (PN
+G copy)> <./images/static_moving_burgers_dt001_45.png (PNG copy)> <./images/sta
+tic_moving_burgers_dt001_46.png (PNG copy)> <./images/static_moving_burgers_dt0
+01_47.png (PNG copy)> <./images/static_moving_burgers_dt001_48.png (PNG copy)> 
+<./images/static_moving_burgers_dt001_49.png (PNG copy)> <./images/static_movin
+g_burgers_dt001_50.png (PNG copy)> <./images/static_moving_burgers_dt001_51.png
+ (PNG copy)> <./images/static_moving_burgers_dt001_52.png (PNG copy)> <./images
+/static_moving_burgers_dt001_53.png (PNG copy)> <./images/static_moving_burgers
+_dt001_54.png (PNG copy)> <./images/static_moving_burgers_dt001_55.png (PNG cop
+y)> <./images/static_moving_burgers_dt001_56.png (PNG copy)> <./images/static_m
+oving_burgers_dt001_57.png (PNG copy)> <./images/static_moving_burgers_dt001_58
+.png (PNG copy)> <./images/static_moving_burgers_dt001_59.png (PNG copy)> <./im
+ages/static_moving_burgers_dt001_60.png (PNG copy)> <./images/static_moving_bur
+gers_dt001_61.png (PNG copy)> <./images/static_moving_burgers_dt001_62.png (PNG
+ copy)> <./images/static_moving_burgers_dt001_63.png (PNG copy)> <./images/stat
+ic_moving_burgers_dt001_64.png (PNG copy)> <./images/static_moving_burgers_dt00
+1_65.png (PNG copy)> <./images/static_moving_burgers_dt001_66.png (PNG copy)> <
+./images/static_moving_burgers_dt001_67.png (PNG copy)> <./images/static_moving
+_burgers_dt001_68.png (PNG copy)> <./images/static_moving_burgers_dt001_69.png 
+(PNG copy)> <./images/static_moving_burgers_dt001_70.png (PNG copy)> <./images/
+static_moving_burgers_dt001_71.png (PNG copy)> <./images/static_moving_burgers_
+dt001_72.png (PNG copy)> <./images/static_moving_burgers_dt001_73.png (PNG copy
+)> <./images/static_moving_burgers_dt001_74.png (PNG copy)> <./images/static_mo
+ving_burgers_dt001_75.png (PNG copy)> <./images/static_moving_burgers_dt001_76.
+png (PNG copy)> <./images/static_moving_burgers_dt001_77.png (PNG copy)> <./ima
+ges/static_moving_burgers_dt001_78.png (PNG copy)> <./images/static_moving_burg
+ers_dt001_79.png (PNG copy)> <./images/static_moving_burgers_dt001_80.png (PNG 
+copy)> <./images/static_moving_burgers_dt001_81.png (PNG copy)> <./images/stati
+c_moving_burgers_dt001_82.png (PNG copy)> <./images/static_moving_burgers_dt001
+_83.png (PNG copy)> <./images/static_moving_burgers_dt001_84.png (PNG copy)> <.
+/images/static_moving_burgers_dt001_85.png (PNG copy)> <./images/static_moving_
+burgers_dt001_86.png (PNG copy)> <./images/static_moving_burgers_dt001_87.png (
+PNG copy)> <./images/static_moving_burgers_dt001_88.png (PNG copy)> <./images/s
+tatic_moving_burgers_dt001_89.png (PNG copy)> <./images/static_moving_burgers_d
+t001_90.png (PNG copy)> <./images/static_moving_burgers_dt001_91.png (PNG copy)
+> <./images/static_moving_burgers_dt001_92.png (PNG copy)> <./images/static_mov
+ing_burgers_dt001_93.png (PNG copy)> <./images/static_moving_burgers_dt001_94.p
+ng (PNG copy)> <./images/static_moving_burgers_dt001_95.png (PNG copy)> <./imag
+es/static_moving_burgers_dt001_96.png (PNG copy)> <./images/static_moving_burge
+rs_dt001_97.png (PNG copy)> <./images/static_moving_burgers_dt001_98.png (PNG c
+opy)> <./images/static_moving_burgers_dt001_99.png (PNG copy)> <./images/static
+_moving_burgers_dt001_100.png (PNG copy)> [17
+
+]
+<images/static_moving_burgers_error_dt001.png, id=2290, 421.575pt x 316.0608pt>
+File: images/static_moving_burgers_error_dt001.png Graphic file (type png)
+<use images/static_moving_burgers_error_dt001.png>
+Package pdftex.def Info: images/static_moving_burgers_error_dt001.png used on i
+nput line 223.
+(pdftex.def)             Requested size: 259.81708pt x 194.78479pt.
+ [18
+
+ <./images/static_moving_burgers_error_dt001.png (PNG copy)>] [19
+
+] [20
+
+] [21
+=======
 PNG copy)>
 Overfull \vbox (6.08138pt too high) detected at line 162
  []
@@ -1309,6 +1714,7 @@ Overfull \vbox (6.08138pt too high) detected at line 183
 [13
 
 ] [14
+>>>>>>> origin/master
 
 ] <./images/static_adapt_burgers_dt01_0.png (PNG copy)> <./images/static_adapt_
 burgers_dt01_1.png (PNG copy)> <./images/static_adapt_burgers_dt01_2.png (PNG c
@@ -1317,6 +1723,105 @@ apt_burgers_dt01_4.png (PNG copy)> <./images/static_adapt_burgers_dt01_5.png (P
 NG copy)> <./images/static_adapt_burgers_dt01_6.png (PNG copy)> <./images/stati
 c_adapt_burgers_dt01_7.png (PNG copy)> <./images/static_adapt_burgers_dt01_8.pn
 g (PNG copy)> <./images/static_adapt_burgers_dt01_9.png (PNG copy)> <./images/s
+<<<<<<< HEAD
+tatic_adapt_burgers_dt01_10.png (PNG copy)> [22
+
+]
+<images/static_adapt_burgers_error_dt01.png, id=2645, 421.575pt x 316.0608pt>
+File: images/static_adapt_burgers_error_dt01.png Graphic file (type png)
+
+<use images/static_adapt_burgers_error_dt01.png>
+Package pdftex.def Info: images/static_adapt_burgers_error_dt01.png used on inp
+ut line 286.
+(pdftex.def)             Requested size: 259.81708pt x 194.78479pt.
+ [23
+
+ <./images/static_adapt_burgers_error_dt01.png (PNG copy)>] <./images/static_ad
+apt_burgers_dt001_0.png (PNG copy)> <./images/static_adapt_burgers_dt001_1.png 
+(PNG copy)> <./images/static_adapt_burgers_dt001_2.png (PNG copy)> <./images/st
+atic_adapt_burgers_dt001_3.png (PNG copy)> <./images/static_adapt_burgers_dt001
+_4.png (PNG copy)> <./images/static_adapt_burgers_dt001_5.png (PNG copy)> <./im
+ages/static_adapt_burgers_dt001_6.png (PNG copy)> <./images/static_adapt_burger
+s_dt001_7.png (PNG copy)> <./images/static_adapt_burgers_dt001_8.png (PNG copy)
+> <./images/static_adapt_burgers_dt001_9.png (PNG copy)> <./images/static_adapt
+_burgers_dt001_10.png (PNG copy)> <./images/static_adapt_burgers_dt001_11.png (
+PNG copy)> <./images/static_adapt_burgers_dt001_12.png (PNG copy)> <./images/st
+atic_adapt_burgers_dt001_13.png (PNG copy)> <./images/static_adapt_burgers_dt00
+1_14.png (PNG copy)> <./images/static_adapt_burgers_dt001_15.png (PNG copy)> <.
+/images/static_adapt_burgers_dt001_16.png (PNG copy)> <./images/static_adapt_bu
+rgers_dt001_17.png (PNG copy)> <./images/static_adapt_burgers_dt001_18.png (PNG
+ copy)> <./images/static_adapt_burgers_dt001_19.png (PNG copy)> <./images/stati
+c_adapt_burgers_dt001_20.png (PNG copy)> <./images/static_adapt_burgers_dt001_2
+1.png (PNG copy)> <./images/static_adapt_burgers_dt001_22.png (PNG copy)> <./im
+ages/static_adapt_burgers_dt001_23.png (PNG copy)> <./images/static_adapt_burge
+rs_dt001_24.png (PNG copy)> <./images/static_adapt_burgers_dt001_25.png (PNG co
+py)> <./images/static_adapt_burgers_dt001_26.png (PNG copy)> <./images/static_a
+dapt_burgers_dt001_27.png (PNG copy)> <./images/static_adapt_burgers_dt001_28.p
+ng (PNG copy)> <./images/static_adapt_burgers_dt001_29.png (PNG copy)> <./image
+s/static_adapt_burgers_dt001_30.png (PNG copy)> <./images/static_adapt_burgers_
+dt001_31.png (PNG copy)> <./images/static_adapt_burgers_dt001_32.png (PNG copy)
+> <./images/static_adapt_burgers_dt001_33.png (PNG copy)> <./images/static_adap
+t_burgers_dt001_34.png (PNG copy)> <./images/static_adapt_burgers_dt001_35.png 
+(PNG copy)> <./images/static_adapt_burgers_dt001_36.png (PNG copy)> <./images/s
+tatic_adapt_burgers_dt001_37.png (PNG copy)> <./images/static_adapt_burgers_dt0
+01_38.png (PNG copy)> <./images/static_adapt_burgers_dt001_39.png (PNG copy)> <
+./images/static_adapt_burgers_dt001_40.png (PNG copy)> <./images/static_adapt_b
+urgers_dt001_41.png (PNG copy)> <./images/static_adapt_burgers_dt001_42.png (PN
+G copy)> <./images/static_adapt_burgers_dt001_43.png (PNG copy)> <./images/stat
+ic_adapt_burgers_dt001_44.png (PNG copy)> <./images/static_adapt_burgers_dt001_
+45.png (PNG copy)> <./images/static_adapt_burgers_dt001_46.png (PNG copy)> <./i
+mages/static_adapt_burgers_dt001_47.png (PNG copy)> <./images/static_adapt_burg
+ers_dt001_48.png (PNG copy)> <./images/static_adapt_burgers_dt001_49.png (PNG c
+opy)> <./images/static_adapt_burgers_dt001_50.png (PNG copy)> <./images/static_
+adapt_burgers_dt001_51.png (PNG copy)> <./images/static_adapt_burgers_dt001_52.
+png (PNG copy)> <./images/static_adapt_burgers_dt001_53.png (PNG copy)> <./imag
+es/static_adapt_burgers_dt001_54.png (PNG copy)> <./images/static_adapt_burgers
+_dt001_55.png (PNG copy)> <./images/static_adapt_burgers_dt001_56.png (PNG copy
+)> <./images/static_adapt_burgers_dt001_57.png (PNG copy)> <./images/static_ada
+pt_burgers_dt001_58.png (PNG copy)> <./images/static_adapt_burgers_dt001_59.png
+ (PNG copy)> <./images/static_adapt_burgers_dt001_60.png (PNG copy)> <./images/
+static_adapt_burgers_dt001_61.png (PNG copy)> <./images/static_adapt_burgers_dt
+001_62.png (PNG copy)> <./images/static_adapt_burgers_dt001_63.png (PNG copy)> 
+<./images/static_adapt_burgers_dt001_64.png (PNG copy)> <./images/static_adapt_
+burgers_dt001_65.png (PNG copy)> <./images/static_adapt_burgers_dt001_66.png (P
+NG copy)> <./images/static_adapt_burgers_dt001_67.png (PNG copy)> <./images/sta
+tic_adapt_burgers_dt001_68.png (PNG copy)> <./images/static_adapt_burgers_dt001
+_69.png (PNG copy)> <./images/static_adapt_burgers_dt001_70.png (PNG copy)> <./
+images/static_adapt_burgers_dt001_71.png (PNG copy)> <./images/static_adapt_bur
+gers_dt001_72.png (PNG copy)> <./images/static_adapt_burgers_dt001_73.png (PNG 
+copy)> <./images/static_adapt_burgers_dt001_74.png (PNG copy)> <./images/static
+_adapt_burgers_dt001_75.png (PNG copy)> <./images/static_adapt_burgers_dt001_76
+.png (PNG copy)> <./images/static_adapt_burgers_dt001_77.png (PNG copy)> <./ima
+ges/static_adapt_burgers_dt001_78.png (PNG copy)> <./images/static_adapt_burger
+s_dt001_79.png (PNG copy)> <./images/static_adapt_burgers_dt001_80.png (PNG cop
+y)> <./images/static_adapt_burgers_dt001_81.png (PNG copy)> <./images/static_ad
+apt_burgers_dt001_82.png (PNG copy)> <./images/static_adapt_burgers_dt001_83.pn
+g (PNG copy)> <./images/static_adapt_burgers_dt001_84.png (PNG copy)> <./images
+/static_adapt_burgers_dt001_85.png (PNG copy)> <./images/static_adapt_burgers_d
+t001_86.png (PNG copy)> <./images/static_adapt_burgers_dt001_87.png (PNG copy)>
+ <./images/static_adapt_burgers_dt001_88.png (PNG copy)> <./images/static_adapt
+_burgers_dt001_89.png (PNG copy)> <./images/static_adapt_burgers_dt001_90.png (
+PNG copy)> <./images/static_adapt_burgers_dt001_91.png (PNG copy)> <./images/st
+atic_adapt_burgers_dt001_92.png (PNG copy)> <./images/static_adapt_burgers_dt00
+1_93.png (PNG copy)> <./images/static_adapt_burgers_dt001_94.png (PNG copy)> <.
+/images/static_adapt_burgers_dt001_95.png (PNG copy)> <./images/static_adapt_bu
+rgers_dt001_96.png (PNG copy)> <./images/static_adapt_burgers_dt001_97.png (PNG
+ copy)> <./images/static_adapt_burgers_dt001_98.png (PNG copy)> <./images/stati
+c_adapt_burgers_dt001_99.png (PNG copy)> <./images/static_adapt_burgers_dt001_1
+00.png (PNG copy)> [24
+
+]
+<images/static_adapt_burgers_error_dt001.png, id=3380, 421.575pt x 316.0608pt>
+File: images/static_adapt_burgers_error_dt001.png Graphic file (type png)
+
+<use images/static_adapt_burgers_error_dt001.png>
+Package pdftex.def Info: images/static_adapt_burgers_error_dt001.png used on in
+put line 300.
+(pdftex.def)             Requested size: 259.81708pt x 194.78479pt.
+ [25
+
+ <./images/static_adapt_burgers_error_dt001.png (PNG copy)>] [26
+=======
 tatic_adapt_burgers_dt01_10.png (PNG copy)>
 Overfull \vbox (6.08138pt too high) detected at line 201
  []
@@ -1401,12 +1906,20 @@ Overfull \vbox (6.08138pt too high) detected at line 208
 [16
 
 ] [17
+>>>>>>> origin/master
 
 ] <./images/dynam_burgers_1.png (PNG copy)> <./images/dynam_burgers_2.png (PNG 
 copy)> <./images/dynam_burgers_3.png (PNG copy)> <./images/dynam_burgers_4.png 
 (PNG copy)> <./images/dynam_burgers_5.png (PNG copy)> <./images/dynam_burgers_6
 .png (PNG copy)> <./images/dynam_burgers_7.png (PNG copy)> <./images/dynam_burg
 ers_8.png (PNG copy)> <./images/dynam_burgers_9.png (PNG copy)> <./images/dynam
+<<<<<<< HEAD
+_burgers_10.png (PNG copy)> <./images/dynam_burgers_11.png (PNG copy)> [27
+
+] [28
+
+] [29
+=======
 _burgers_10.png (PNG copy)> <./images/dynam_burgers_11.png (PNG copy)>
 Overfull \vbox (6.08138pt too high) detected at line 229
  []
@@ -1416,6 +1929,7 @@ Overfull \vbox (6.08138pt too high) detected at line 229
 ]
 Package atenddvi Info: Last page = 19.
  [19
+>>>>>>> origin/master
 
 ]
 \tf@nav=\write7
@@ -1427,6 +1941,15 @@ Package atenddvi Info: Last page = 19.
 \tf@snm=\write9
 \openout9 = `CDEsGroupPresentation.snm'.
 
+<<<<<<< HEAD
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 350.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 350.
+ (./CDEsGroupPresentation.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 350.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 350.
+Package rerunfilecheck Info: File `CDEsGroupPresentation.out' has not changed.
+(rerunfilecheck)             Checksum: 86F0065B51C480E861F964E0EE9589ED;874.
+=======
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 241.
 Package atveryend Info: Executing hook `AfterLastShipout' on input line 241.
  (./CDEsGroupPresentation.aux)
@@ -1437,6 +1960,7 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 241.
 Package rerunfilecheck Warning: File `CDEsGroupPresentation.out' has changed.
 (rerunfilecheck)                Rerun to get outlines right
 (rerunfilecheck)                or use package `bookmark'.
+>>>>>>> origin/master
 
 Package rerunfilecheck Info: Checksums for `CDEsGroupPresentation.out':
 (rerunfilecheck)             Before: 6B192DEFCFAB09810D638E6A33707308;748
@@ -1445,6 +1969,35 @@ Package rerunfilecheck Info: Checksums for `CDEsGroupPresentation.out':
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
+<<<<<<< HEAD
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 350.
+ ) 
+Here is how much of TeX's memory you used:
+ 22980 strings out of 493315
+ 425846 string characters out of 6137904
+ 590164 words of memory out of 5000000
+ 25489 multiletter control sequences out of 15000+600000
+ 12588 words of font info for 50 fonts, out of 8000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 49i,20n,62p,3246b,754s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
+></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><
+/usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></
+usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></u
+sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr
+/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></us
+r/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></us
+r/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr
+/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
+local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb>
+Output written on CDEsGroupPresentation.pdf (29 pages, 24680886 bytes).
+PDF statistics:
+ 3792 PDF objects out of 4296 (max. 8388607)
+ 2713 compressed objects within 28 object streams
+ 74 named destinations out of 1000 (max. 500000)
+ 5743 words of extra memory for PDF output out of 10000 (max. 10000000)
+=======
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 241.
  ) 
 Here is how much of TeX's memory you used:
@@ -1471,4 +2024,5 @@ PDF statistics:
  1653 compressed objects within 17 object streams
  53 named destinations out of 1000 (max. 500000)
  5321 words of extra memory for PDF output out of 10000 (max. 10000000)
+>>>>>>> origin/master
 
