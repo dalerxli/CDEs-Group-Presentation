@@ -82,7 +82,7 @@
 \textbf{Method of lines}
 \vspace{0.25cm}
 \begin{itemize}
-    \item Discretise in space (ie using finite difference) to generate a system of ODEs.
+    \item Discretise in space (eg. using finite difference) to generate a system of ODEs.
     \vspace{0.25cm}
     \item Solve the system using some solver such as ode15s.
     \vspace{0.25cm}
@@ -97,53 +97,43 @@
 \begin{itemize}
     \item Method of lines discretises the space uniformly.
     \vspace{0.25cm}
-    \item Low density uniform mesh doesn't approximate steep fronts well.
-    \vspace{0.25cm}
-    \item Using a high density uniform mesh to achieve high spatial accuracy wastes nodes in regions of low activity.
+    \item What if our problem has \emph{steep fronts}?
+        \vspace{0.25cm}
+        \begin{itemize}
+            \item[--] Low density uniform mesh doesn't approximate steep fronts well.
+            \vspace{0.25cm}
+            \item[--] High density uniform mesh achieves high spatial accuracy, but wastes nodes in regions of low activity.
+        \end{itemize}
 \end{itemize}
 }
 
 \subsection{Method of lines used to solve Burgers' equation}
 \frame{\frametitle{Method of Lines - Burgers' Equation}
 \begin{itemize}
-<<<<<<< HEAD
 	\item Bad approximation in regions of high spatial activity when grid is uniform. Here we use 201 nodes.
-=======
-\item Bad approximation in regions of high spatial activity when grid is uniform.
->>>>>>> origin/master
 \end{itemize}
 \animategraphics[controls, width=1\linewidth]{1}{images/MoL_burgers_}{0}{10}
 }
 
-\subsection{Motivation}
-\frame{\frametitle{Motivation}
-\textbf{Mesh adaptation}
-\vspace{0.25cm}
+\section{Adaptive Method of Lines}
+\subsection{Mesh Adaptation}
+\frame{\frametitle{Mesh Adaptation}
 \begin{itemize}
-<<<<<<< HEAD
 	\item Want to adapt the spatial mesh such that nodes are efficiently placed.
 	\begin{itemize}
-		\item Static moving mesh.
-		\item Static grid refinement.
-		\item Dynamic mesh.
+		\item[--] Static moving mesh.
+		\item[--] Static grid refinement.
+		\item[--] Dynamic mesh.
 	\end{itemize}
-=======
-    \item Want to adapt the spatial mesh such that nodes are efficiently placed.
-            \begin{itemize}
-                \item Static moving mesh.
-                \item Static grid refinement.
-                \item Dynamic mesh.
-            \end{itemize}
->>>>>>> origin/master
 \end{itemize}
 }
 
-\section{Adaptive Method of Lines}
+
 \subsection{Equidistribution principle}
 \frame{\frametitle{Equidistribution Principle}
 \textbf{Tracking the action}
 \begin{itemize}
-    \item We want to assign nodes to areas with high activity.
+    \item Want to assign more nodes to areas with high activity.
     \item Use some monitor function $m(x)$ to measure the activity in a region.
     \item Choose the $x_i$ such that for all $i$,\\ $\int\limits_{x_{i-1}}^{x^{i}} m(x) \, \text{d}x = \int\limits_{x_{i}}^{x^{i+1}} m(x) \, \text{d}x$ (equidistribution).
     \item In practice equidistribution is considered optimal, but some suboptimal methods may be used to have roughly equal distribution in order to reduce computational effort.
@@ -165,6 +155,18 @@
 
 \frame{\frametitle{Uniform vs Equidistributed Arclengths (n=21)}
 \centering \includegraphics[scale=.35]{images/mesh_uniform.png} \includegraphics[scale=.35]{images/mesh_arclength.png}
+}
+
+\section*{}
+\frame{\frametitle{Example Problems}
+\begin{itemize}
+    \item Burgers' Equation \\
+    $u_{t} + u u_{x} + u_{xx} = 0$
+    \vspace{0.4cm}
+    \item Korteweg-de Vries (KDV) Equation \\
+    $u_{t} + u_{xxx} + 6u u_{x} = 0$
+    \vspace{0.25cm}
+\end{itemize}
 }
 
 \section{Static Method}
@@ -231,13 +233,10 @@
 \animategraphics[controls, width=1\linewidth]{10}{images/static_moving_burgers_dt001_}{0}{100}
 }
 
-<<<<<<< HEAD
 \frame{\frametitle{Moving Mesh - Burgers' Equation Example 2 Error}
 \centering \includegraphics[height=0.8\textheight]{images/static_moving_burgers_error_dt001.png}
 }
 
-=======
->>>>>>> origin/master
 %\subsection{Mesh Refinement theory and examples}
 %\frame{\frametitle{Mesh Refinement}
 %\begin{itemize}
@@ -252,31 +251,18 @@
 \subsection{Mesh Refinement theory and examples}
 \frame{\frametitle{Mesh Refinement}
 \begin{itemize}
-<<<<<<< HEAD
 	\item Just as in moving mesh, the mesh is updated at set intervals.
 	\vspace{0.25cm}
 	\item Procedure for each mesh adaption:
-		\begin{itemize}
+         \setbeamertemplate{enumerate items}[default]
+		\begin{enumerate}
 			\item Reset to uniform base grid.
 			\item Evaluate monitor function between each pair of nodes.
 			\item If threshold exceeded, add nodes with uniform spacing
 			\item If below threshold, remove some nodes.
 			\item Interpolate and repeat.
-		\end{itemize}
+		\end{enumerate}
 	\vspace{0.25cm}
-=======
-\item Just as in moving mesh, the mesh is updated at set intervals.
-\vspace{0.25cm}
-\item Procedure at each ``pause":
-	\begin{itemize}
-		\item Reset to uniform grid.
-		\item Evaluate monitor function between each pair of nodes.
-		\item If threshold exceeded, add nodes with uniform spacing
-		\item If below threshold, remove some nodes.
-		\item Interpolate and repeat.
-	\end{itemize}
-\vspace{0.25cm}
->>>>>>> origin/master
 \end{itemize}
 \vspace{0.25cm}
 \begin{center}
@@ -325,38 +311,29 @@
 \animategraphics[controls, width=1\linewidth]{10}{images/static_adapt_burgers_dt001_}{0}{100}
 }
 
-<<<<<<< HEAD
+
 \frame{\frametitle{Mesh Refinement - Burgers' Equation Example 2 Error}
 \centering \includegraphics[height=0.8\textheight]{images/static_adapt_burgers_error_dt001.png}
 }
 
-=======
->>>>>>> origin/master
 \section{Dynamic Method}
-\subsection{Dynamic Method}
-\frame{\frametitle{Dynamic Method}
+%\subsection{Dynamic Method}
+\frame{\frametitle{Problems with Static Grid Refinement}
 \begin{itemize}
-<<<<<<< HEAD
-	\item Refining the grid at set time steps can cause the mesh to lag behind the moving solution.
+	\item Infrequent grid refinement can cause the mesh to lag behind the moving solution.
 	\vspace{0.25cm}
 	\item Refining too often is computationally expensive and negates any benefits from adaptive mesh.
 	\vspace{0.25cm}
 	\item In dynamic refinement methods, positions of nodes are functions of time.
 	\vspace{0.25cm}
+\end{itemize}
+}
+
+\frame{\frametitle{Dynamic Method}
+\begin{itemize}
 	\item May be possible to use a priori information to generate functions for the wave to travel along. For example the characteristic curves along which the solution is constant. For a simple moving wave this tracks positions on the wave-front.
 	\vspace{0.25cm}
 	\item Requires specific a priori knowledge of the problem, not always possible to derive characteristic curves.
-=======
-\item Refining the grid at set time steps can cause the mesh to lag behind the moving solution.
-\vspace{0.25cm}
-\item Refining too often is computationally expensive and negates any benefits from adaptive mesh.
-\vspace{0.25cm}
-\item In dynamic refinement methods, positions of nodes are functions of time.
-\vspace{0.25cm}
-\item May be possible to use a priori information to generate functions for the wave to travel along. For example the characteristic curves along which the solution is constant. For a simple moving wave this tracks positions on the wave-front.
-\vspace{0.25cm}
-\item Requires specific a priori knowledge of the problem, not always possible to derive characteristic curves.
->>>>>>> origin/master
 \end{itemize}
 }
 
@@ -373,7 +350,6 @@
 \section*{}
 \frame{\frametitle{Summary}
 \begin{itemize}
-<<<<<<< HEAD
 	\item Problems arise when uniform grid used in Method of Lines.
 	\vspace{0.25cm}
 	\item Solution: adapt the grid to account for regions of high activity.
@@ -381,17 +357,21 @@
 	\item Static adaptation: refine the grid at discrete time steps.
 	\vspace{0.25cm}
 	\item Dynamic adaptation: positions of nodes are functions of time.
-=======
-\item Problems arise when uniform grid used in Method of Lines.
-\vspace{0.25cm}
-\item Solution: adapt the grid to account for regions of high activity.
-\vspace{0.25cm}
-\item Static adaptation: refine the grid at discrete time steps.
-\vspace{0.25cm}
-\item Dynamic adaptation: positions of nodes are functions of time.
->>>>>>> origin/master
 \end{itemize}
 }
+
+\begin{frame}%[allowframebreaks]
+        \frametitle{References}
+        \begin{itemize}
+        		\item Vande Wouwer, Saucez and Schiesser, \emph{The Adaptive Method of Lines}, Chapman and Hall, 2001.
+		\item Vande Wouwer, Saucez and Schiesser, \emph{Simulation of ODE/PDE Models with MATLAB, OCTAVE and SCILAB}, Springer 2014.
+		\item Marlow, \emph{Moving Mesh Methods for Solving Parabolic Partial Differential Equations}, Ph. D. Thesis, 2010.
+	\end{itemize}
+%        \bibliographystyle{amsalpha}
+%        \nocite{*}
+%        \bibliography{refs}
+\end{frame}
+
 
 \frame{
     \begin{center}
