@@ -82,9 +82,9 @@
 \textbf{Method of lines}
 \vspace{0.25cm}
 \begin{itemize}
-    \item Discretise in space (eg. using finite difference) to generate a system of ODEs.
+    \item Discretise in space (eg. using finite difference) to generate a system of ODEs.\pause
     \vspace{0.25cm}
-    \item Solve the system using some solver such as ode15s.
+    \item Solve the system using some solver such as ode15s.\pause
     \vspace{0.25cm}
     \item Temporal accuracy handled by the ODE solver, however spatial accuracy results from the discretisation used.
 \end{itemize}
@@ -95,12 +95,12 @@
 \textbf{Problems with Uniform Mesh}
 \vspace{0.25cm}
 \begin{itemize}
-    \item Method of lines discretises the space uniformly.
+    \item Method of lines discretises the space uniformly.\pause
     \vspace{0.25cm}
-    \item What if our problem has \emph{steep fronts}?
+    \item What if our problem has \emph{steep fronts}?\pause
         \vspace{0.25cm}
         \begin{itemize}
-            \item[--] Low density uniform mesh doesn't approximate steep fronts well.
+            \item[--] Low density uniform mesh doesn't approximate steep fronts well.\pause
             \vspace{0.25cm}
             \item[--] High density uniform mesh achieves high spatial accuracy, but wastes nodes in regions of low activity.
         \end{itemize}
@@ -119,7 +119,7 @@
 \subsection{Mesh Adaptation}
 \frame{\frametitle{Mesh Adaptation}
 \begin{itemize}
-	\item Want to adapt the spatial mesh such that nodes are efficiently placed.
+	\item Want to adapt the spatial mesh as we solve in time such that nodes are efficiently placed.\pause
 	\begin{itemize}
 		\item[--] Static moving mesh.
 		\item[--] Static grid refinement.
@@ -133,23 +133,23 @@
 \frame{\frametitle{Equidistribution Principle}
 \textbf{Tracking the action}
 \begin{itemize}
-    \item Want to assign more nodes to areas with high activity.
-    \item Use some monitor function $m(x)$ to measure the activity in a region.
-    \item Choose the $x_i$ such that for all $i$,\\ $\int\limits_{x_{i-1}}^{x^{i}} m(x) \, \text{d}x = \int\limits_{x_{i}}^{x^{i+1}} m(x) \, \text{d}x$ (equidistribution).
-    \item In practice equidistribution is considered optimal, but some suboptimal methods may be used to have roughly equal distribution in order to reduce computational effort.
+    \item Want to assign more nodes to areas with high activity.\pause
+    \item Use some monitor function $m(x)$ to measure the activity in a region.\pause
+    \item Choose the $x_i$ such that for all $i$,\\ $\int\limits_{x_{i-1}}^{x^{i}} m(x) \, \text{d}x = \int\limits_{x_{i}}^{x^{i+1}} m(x) \, \text{d}x$ (equidistribution).\pause
+    \item In theory exact equidistribution is optimal, but in practice we may use suboptimal methods that are faster.
 \end{itemize}
 }
 
 \subsection{Choice of monitor function}
 \frame{\frametitle{Choice of Monitor Function}
 \begin{itemize}
-    \item Arc length $m(x) = \sqrt{\alpha + u_x^2(x)}$.
+    \item Arc length $m(x) = \sqrt{\alpha + u_x^2(x)}$.\pause
     \vspace{0.25cm}
-    \item Local curvature $m(x) = |u_{xx}(x)|$.
+    \item Local curvature $m(x) = |u_{xx}(x)|$.\pause
     \vspace{0.25cm}
-    \item Other options involving many tuning parameters exist.
+    \item Other options involving many tuning parameters exist.\pause
     \vspace{0.25cm}
-    \item Since the true solution is not known, derivatives must be estimated. Can use natural splines to interpolate current solution and use its derivatives as approximation.
+    \item Since the true solution is not known, derivatives must be estimated, eg. using spline interpolation.
 \end{itemize}
 }
 
@@ -173,18 +173,19 @@
 \subsection{Moving Mesh theory and examples}
 \frame{\frametitle{Moving Mesh}
 \begin{itemize}
-    \item Fix the number of nodes.
+    \item Fix the number of nodes.\pause
     \vspace{0.25cm}
-    \item Pause the PDE solver at a set interval to move the mesh nodes to achieve equidistribution.
+    \item Pause the solver at set time intervals to move the mesh nodes to achieve equidistribution.\pause
     \vspace{0.25cm}
     \item Interpolate the solution from old mesh to generate initial conditions for new mesh.
 \end{itemize}
 }
 
 \frame{\frametitle{Moving Mesh - KDV Equation Example 1}
+\centering
 \begin{tabular}{c|c|c}
 	\hline
-	\rule{0pt}{2ex} Mesh Adaptions & \# of Mesh Nodes & Computation Time \\
+	\rule{0pt}{2ex} Mesh adaptations & \# of Mesh Nodes & Computation Time \\
 	\hline
 	\rule{0pt}{2ex} 10 & 151 & 8.9 sec \\
 \end{tabular}
@@ -196,9 +197,10 @@
 }
 
 \frame{\frametitle{Moving Mesh - KDV Equation Example 2}
+\centering
 \begin{tabular}{c|c|c}
 	\hline
-	\rule{0pt}{2ex} Mesh Adaptions & \# of Mesh Nodes & Computation Time \\
+	\rule{0pt}{2ex} Mesh adaptations & \# of Mesh Nodes & Computation Time \\
 	\hline
 	\rule{0pt}{2ex} 50 & 151 & 19.6 sec \\
 \end{tabular}
@@ -210,9 +212,10 @@
 }
 
 \frame{\frametitle{Moving Mesh - Burgers' Equation Example 1}
+\centering
 \begin{tabular}{c|c|c}
 	\hline
-	\rule{0pt}{2ex} Mesh Adaptions & \# of Mesh Nodes & Computation Time \\
+	\rule{0pt}{2ex} Mesh adaptations & \# of Mesh Nodes & Computation Time \\
 	\hline
 	\rule{0pt}{2ex} 10 & 375 & 5.8 sec \\
 \end{tabular}
@@ -224,9 +227,10 @@
 }
 
 \frame{\frametitle{Moving Mesh - Burgers' Equation Example 2}
+\centering
 \begin{tabular}{c|c|c}
 	\hline
-	\rule{0pt}{2ex} Mesh Adaptions & \# of Mesh Nodes & Computation Time \\
+	\rule{0pt}{2ex} Mesh adaptations & \# of Mesh Nodes & Computation Time \\
 	\hline
 	\rule{0pt}{2ex} 100 & 251 & 36.1 sec \\
 \end{tabular}
@@ -237,29 +241,25 @@
 \centering \includegraphics[height=0.8\textheight]{images/static_moving_burgers_error_dt001.png}
 }
 
-%\subsection{Mesh Refinement theory and examples}
-%\frame{\frametitle{Mesh Refinement}
-%\begin{itemize}
-%\item Just as in moving mesh, the mesh is updated at set intervals.
-%\vspace{0.25cm}
-%\item Rather than trying to achieve equidistribution, A uniform grid is used as a skeleton, at each pause the monitor function is measured between each node, additional nodes with uniform spacing is added in between nodes that exceed some threshold.
-%\vspace{0.25cm}
-%\item Interpolate and continue.
-%\end{itemize}
-%}
-
 \subsection{Mesh Refinement theory and examples}
 \frame{\frametitle{Mesh Refinement}
 \begin{itemize}
-	\item Just as in moving mesh, the mesh is updated at set intervals.
+	\item The mesh is updated at set intervals.\pause
 	\vspace{0.25cm}
-	\item Procedure for each mesh adaption:
+	\item Variable number of nodes.\pause
+	\vspace{0.25cm}
+	\item Thresholds, $\tau_j$, on the monitor function dictate how many nodes are added or removed from the grid.
+\end{itemize}
+}
+
+\frame{\frametitle{Mesh Refinement - Algorithm}
+\begin{itemize}
+	\item Procedure for each mesh adaptation:\pause
          \setbeamertemplate{enumerate items}[default]
 		\begin{enumerate}
-			\item Reset to uniform base grid.
-			\item Evaluate monitor function between each pair of nodes.
-			\item If threshold exceeded, add nodes with uniform spacing
-			\item If below threshold, remove some nodes.
+			\item Reset to uniform base grid.\pause
+			\item Evaluate monitor function between each pair of nodes.\pause
+			\item If the value of $\int_{x_i}^{x_{i+1}}m(x)~dx$ exceeds the threshold $\tau_j$, then add $\eta_j$ nodes with uniform spacing\pause
 			\item Interpolate and repeat.
 		\end{enumerate}
 	\vspace{0.25cm}
@@ -267,10 +267,10 @@
 \vspace{0.25cm}
 \begin{center}
 	\begin{tikzpicture}
-		\uncover<2->{
+		\uncover<6->{
 		\foreach \x in  {-4,-3,-2,-1,0,1,2,3,4} 
 		\draw [thick] (\x,0) circle [radius=0.08];}
-		\uncover<3->{
+		\uncover<7->{
 		\draw [fill,color=Blue] (-3.5,0) circle [radius=0.05];
 		\foreach \x in  {-2.66,-2.33} 
 		\draw [fill,color=Blue] (\x,0) circle [radius=0.05];
@@ -288,9 +288,10 @@
 }
 
 \frame{\frametitle{Mesh Refinement - Burgers' Equation Example 1}
+\centering
 \begin{tabular}{c|c|c}
 	\hline
-	\rule{0pt}{2ex} Mesh Adaptions & \# of Mesh Nodes & Computation Time \\
+	\rule{0pt}{2ex} Mesh adaptations & \# of Mesh Nodes & Computation Time \\
 	\hline
 	\rule{0pt}{2ex} 10 & $\approx$ 268.5 & 6.0 sec \\
 \end{tabular}
@@ -302,9 +303,10 @@
 }
 
 \frame{\frametitle{Mesh Refinement - Burgers' Equation Example 2}
+\centering
 \begin{tabular}{c|c|c}
 	\hline
-	\rule{0pt}{2ex} Mesh Adaption & \# of Mesh Nodes & Computation Time \\
+	\rule{0pt}{2ex} Mesh adaptation & \# of Mesh Nodes & Computation Time \\
 	\hline
 	\rule{0pt}{2ex} 100 & $\approx$ 152.5 & 41.2 sec \\
 \end{tabular}
@@ -317,12 +319,12 @@
 }
 
 \section{Dynamic Method}
-%\subsection{Dynamic Method}
+\subsection{Theory and example}
 \frame{\frametitle{Problems with Static Grid Refinement}
 \begin{itemize}
-	\item Infrequent grid refinement can cause the mesh to lag behind the moving solution.
+	\item Infrequent grid refinement can cause the mesh to lag behind the moving solution.\pause
 	\vspace{0.25cm}
-	\item Refining too often is computationally expensive and negates any benefits from adaptive mesh.
+	\item Refining too often is computationally expensive and negates any benefits from adaptive mesh.\pause
 	\vspace{0.25cm}
 	\item In dynamic refinement methods, positions of nodes are functions of time.
 	\vspace{0.25cm}
@@ -333,58 +335,62 @@
 \begin{itemize}
 	\item May be possible to use a priori information to generate functions for the wave to travel along.
 		\begin{itemize}
-			\item Characteristic functions.
-			\item Moving Mesh PDE (MMPDE).
+			\item Characteristic curves.
+			\item Moving Mesh PDE (MMPDE).\pause
 		\end{itemize}
 	\vspace{0.25cm}
-	\item Characteristic curves may not always be useful.
+	\item Characteristic curves may not always be useful.\pause
 	\item Moving mesh requires another PDE to be solved, but are highly flexible.
 \end{itemize}
 }
 
 \frame{\frametitle{Dynamic Method - Burgers' Equation Example}
+\centering
 \begin{tabular}{c|c|c}
 	\hline
-	\rule{0pt}{2ex} Mesh Adaptions & \# of Mesh Points & Computation Time \\
+	\rule{0pt}{2ex} Mesh adaptations & \# of Mesh Points & Computation Time \\
 	\hline
 	\rule{0pt}{2ex} 10 & 51 & 15.4 sec \\
 \end{tabular}
 \animategraphics[controls, width=1\linewidth]{1}{images/dynam_burgers_}{1}{11}
 }
 
-\section*{}
+\section{Summary}
+
+\frame{\frametitle{Error Comparison}
+\centering \includegraphics[height=0.8\textheight]{images/burgers_error_nz151_dt001.png}
+}
+
 \frame{\frametitle{Summary}
 \begin{itemize}
-	\item Problems arise when uniform grid used in Method of Lines.
+	\item Problems arise when uniform grid used in Method of Lines for problems with steep moving fronts.\pause
 	\vspace{0.25cm}
-	\item Solution: adapt the grid to account for regions of high activity.
+	\item Solution: adapt the grid to account for regions of high activity.\pause
 	\vspace{0.25cm}
-	\item Static adaptation: refine the grid at discrete time steps.
-	\vspace{0.25cm}
-	\item Dynamic adaptation: positions of nodes are functions of time.
+	\begin{itemize}
+		\item Static adaptation: refine the grid at discrete time steps.		
+		\item Dynamic adaptation: positions of nodes are functions of time.\pause
+		\vspace{0.25cm}
+	\end{itemize}
+	\item While the adaptive MoL is harder to implement, it is expected to perform better than the standard MoL.
 \end{itemize}
 }
 
 \begin{frame}%[allowframebreaks]
         \frametitle{References}
+	\small
         \begin{itemize}
         		\item Vande Wouwer, Saucez and Schiesser, \emph{The Adaptive Method of Lines}, Chapman and Hall, 2001.
 		\item Vande Wouwer, Saucez and Schiesser, \emph{Simulation of ODE/PDE Models with MATLAB, OCTAVE and SCILAB}, Springer 2014.
 		\item Marlow, \emph{Moving Mesh Methods for Solving Parabolic Partial Differential Equations}, Ph. D. Thesis, 2010.
 	\end{itemize}
+	\huge
+	\centering
+	Any questions?
 %        \bibliographystyle{amsalpha}
 %        \nocite{*}
 %        \bibliography{refs}
 \end{frame}
 
-
-\frame{
-    \begin{center}
-        \huge
-        This is the last slide.\\
-        \vspace{1cm}
-        Any questions?
-    \end{center}
-}
 
 \end{document} 
