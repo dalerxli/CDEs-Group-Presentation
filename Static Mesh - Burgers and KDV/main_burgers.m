@@ -1,10 +1,16 @@
-close all;
-clear;
+function [t,error] = main_burgers(use_local_refine,nz,dt)
+% use_local_refine specifies method to use (moving mesh or mesh refinement)
+% nz = number of starting mesh points
+% dt = adaptation frequency
+
+
+%close all;
+%clear;
 % Start a stopwatch timer
 tic
 
 %use local_refine function(=1) or agereg function(=0)?
-use_local_refine=1;
+%use_local_refine=1;
 
 %set default axes properties
 set(0,'DefaultAxesFontSize', 14,'DefaultAxesFontWeight','bold','DefaultAxesLineWidth',1.5);
@@ -22,7 +28,7 @@ global nsteps maxsteps tprint tflag tout
 % Spatial grid
 z0 = 0;
 zL = 1;
-nz = 51; %number of mesh points
+%nz = 51; %number of mesh points
 nzout = nz; %vector to store all grid sizes used
 dz = (zL-z0)/(nz-1); %initial spatital grid step
 z = [z0:dz:zL]'; %spatial grid
@@ -48,7 +54,7 @@ ilim = 1;   %(binary) whether to limit u_xx
 % call to ODE solver
 t0 = 0;     %initial time
 tf = 1;     %end time
-dt = 0.01;     %adaption frequency
+%dt = 0.1;     %adaption frequency
 yout = x;
 zout = z;
 nzout= [nzout; nz];
@@ -85,18 +91,18 @@ set(gca,'XTickLabel','');
 hold off
 
 %save plot
-plot_count=0;
-if use_local_refine == 0
-    tstep=num2str(dt);
-    tstep(tstep=='.')=[];
-    print('-painters','-dpng',sprintf(strcat('imagesburg\\static_moving_burgers_dt',...
-        tstep,'_%d'),plot_count))
-else
-    tstep=num2str(dt);
-    tstep(tstep=='.')=[];
-    print('-painters','-dpng',sprintf(strcat('imagesburg\\static_adapt_burgers_dt',...
-        tstep,'_%d'),plot_count))
-end
+% plot_count=0;
+% if use_local_refine == 0
+%     tstep=num2str(dt);
+%     tstep(tstep=='.')=[];
+%     print('-painters','-dpng',sprintf(strcat('imagesburg\\static_moving_burgers_dt',...
+%         tstep,'_%d'),plot_count))
+% else
+%     tstep=num2str(dt);
+%     tstep(tstep=='.')=[];
+%     print('-painters','-dpng',sprintf(strcat('imagesburg\\static_adapt_burgers_dt',...
+%         tstep,'_%d'),plot_count))
+% end
 
 
 % refine the initial grid
@@ -182,18 +188,18 @@ while tk <= tf - 1.e-5
 		tprint = tprint + dt;
         
         %save plot
-        plot_count = plot_count + 1;
-        if use_local_refine == 0
-            tstep=num2str(dt);
-            tstep(tstep=='.')=[];
-            print('-painters','-dpng',sprintf(strcat('imagesburg\\static_moving_burgers_dt',...
-                tstep,'_%d'),plot_count))
-        else
-            tstep=num2str(dt);
-            tstep(tstep=='.')=[];
-            print('-painters','-dpng',sprintf(strcat('imagesburg\\static_adapt_burgers_dt',...
-                tstep,'_%d'),plot_count))
-        end
+%         plot_count = plot_count + 1;
+%         if use_local_refine == 0
+%             tstep=num2str(dt);
+%             tstep(tstep=='.')=[];
+%             print('-painters','-dpng',sprintf(strcat('imagesburg\\static_moving_burgers_dt',...
+%                 tstep,'_%d'),plot_count))
+%         else
+%             tstep=num2str(dt);
+%             tstep(tstep=='.')=[];
+%             print('-painters','-dpng',sprintf(strcat('imagesburg\\static_adapt_burgers_dt',...
+%                 tstep,'_%d'),plot_count))
+%         end
 		
         
     end
@@ -204,25 +210,28 @@ while tk <= tf - 1.e-5
 end
 % plot and output highest error
 figure(2)
-plot(tout(2:end),error,'.b-','markersize',15)
+loglog(tout(2:end),error,'.b--','markersize',15)
 xlabel('t');
-ylabel('error');
+ylabel('max grid error');
 grid on
-% save error plot
-if use_local_refine == 0
-    tstep=num2str(dt);
-    tstep(tstep=='.')=[];
-    print('-painters','-dpng',sprintf(strcat(...
-        'imagesburg\\static_moving_burgers_error_dt',tstep)))
-else
-    tstep=num2str(dt);
-    tstep(tstep=='.')=[];
-    print('-painters','-dpng',sprintf(strcat(...
-        'imagesburg\\static_adapt_burgers_error_dt',tstep)))
-end
+%save error plot
+% if use_local_refine == 0
+%     tstep=num2str(dt);
+%     tstep(tstep=='.')=[];
+%     print('-painters','-dpng',sprintf(strcat(...
+%         'imagesburg\\static_moving_burgers_error_dt',tstep)))
+% else
+%     tstep=num2str(dt);
+%     tstep(tstep=='.')=[];
+%     print('-painters','-dpng',sprintf(strcat(...
+%         'imagesburg\\static_adapt_burgers_error_dt',tstep)))
+% end
 
 fprintf('max grid error across all time steps = %6.4f\n',max(error));
 % read the stopwatch timer
 tcpu = toc; %output computation ttime
 nav = sum(nzout)/length(nzout); %output average number of mesh points
 fprintf('time = %6.4f, \naverage # mesh points = %8.4f \n\n',tcpu,nav);
+
+t = tout(2:end);
+end

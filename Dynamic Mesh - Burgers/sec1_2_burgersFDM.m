@@ -1,4 +1,4 @@
-function sec1_2_burgersFDM
+function [t,error] = sec1_2_burgersFDM(jmax,dt)
 %
 % example driver for Burgers' equation in section 1.2.
 % it calls movfdm().
@@ -27,8 +27,8 @@ set(0,'DefaultAxesGridLineStyle','-');
 %set default mesh properties
 set(0,'DefaultSurfaceFaceColor','interp');
 
-clear
-clf
+%clear
+%clf
 cpu0=clock;
 
    % job = 1 for solution
@@ -37,14 +37,14 @@ cpu0=clock;
    job = 1;
     
    %define number of mesh points
-   jmax = 51;
+   %jmax = 51;
    npde = 1;
    nn = npde*jmax;
    
 % define time parameters
 t0 = 0;
 tf = 1;
-dt = 0.1;
+%dt = 0.1;
 
 %initialise solution and error vectors/matrices
 x=zeros(jmax,1);
@@ -64,7 +64,7 @@ errorMesh=zeros(length(t0:dt:tf),jmax);
    global epsilon
    epsilon = 0.001;
    for i=1:jmax
-      u(1,i) = burgers_exact(x(i,1),0);
+      u(1,i) = burgers_exact_dynam(x(i,1),0);
    end;
    
 % initial situation
@@ -86,7 +86,7 @@ grid on
 hold on
 
 for i=1:jmax
-    uexact(i) = burgers_exact(x(i,1),t0);
+    uexact(i) = burgers_exact_dynam(x(i,1),t0);
 end;
 
 subplot('position', [0.1, 0.3, 0.85, 0.65]);
@@ -97,8 +97,8 @@ set(gca,'XTickLabel','');
 hold off
 
 %save plot
-plot_count=0;
-print('-painters','-dpng',sprintf('images\\dynam_burgers_%d',plot_count))
+% plot_count=0;
+% print('-painters','-dpng',sprintf('images\\dynam_burgers_%d',plot_count))
 
    
 % call the moving mesh function
@@ -139,7 +139,7 @@ print('-painters','-dpng',sprintf('images\\dynam_burgers_%d',plot_count))
          hold on
          
          for i=1:jmax
-            uexact(i) = burgers_exact(x(i,1),t(n)); %exact solution
+            uexact(i) = burgers_exact_dynam(x(i,1),t(n)); %exact solution
          end;
 		 plot(x(:,1),uexact,'r','LineWidth',2)
          legend('Approximate Solution','Exact Solution');
@@ -151,8 +151,8 @@ print('-painters','-dpng',sprintf('images\\dynam_burgers_%d',plot_count))
 		 plot(x(:,1),t(n)*ones(jmax,1),'.b')
          
          %save plot
-         plot_count=plot_count+1;
-         print('-painters','-dpng',sprintf('images\\dynam_burgers_%d',plot_count))
+%          plot_count=plot_count+1;
+%          print('-painters','-dpng',sprintf('images\\dynam_burgers_%d',plot_count))
          
          xMesh(n,:)=x;
          uMesh(n,:)=u';
@@ -178,12 +178,18 @@ xlabel('x');
 ylabel('t');
 zlabel('solution');
 
-Fig3=figure(3);
-set(Fig3, 'Position', [200 100 1000 600])
-surf(xMesh,t,errorMesh)
+% Fig3=figure(3);
+% set(Fig3, 'Position', [200 100 1000 600])
+% surf(xMesh,t,errorMesh)
+% xlabel('x');
+% ylabel('t');
+% zlabel('error');
+
+figure(4)
+plot(xMesh,t,'b')
+axis([0, 1, 0, 1]);
 xlabel('x');
 ylabel('t');
-zlabel('error');
 
 %output hightest error
 fprintf('worst error of all mesh points and all time steps = %6.4f\n',max(max(errorMesh)));
@@ -207,6 +213,7 @@ end
 function f=BC_R(t,x,u,ux,ut)
   f(1) = ut(1)-0;
 end
-  
+
+error = max(errorMesh,[],2);
   
 end

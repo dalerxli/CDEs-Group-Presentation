@@ -1,3 +1,5 @@
+function [t,error] = main_korteweg_devries()
+
 close all;
 clear;
 % Start a stopwatch timer
@@ -13,7 +15,7 @@ set(0,'DefaultLegendFontSize',12,'DefaultLegendLocation','NorthWest','DefaultLeg
 %set default line properties
 set(0,'DefaultLineLineWidth',1.5);
 %set default grid properties
-set(0,'DefaultAxesGridLineStyle','-');
+set(0,'DefaultAxesGridLineStyle','-','DefaultAxesMinorGridLineStyle',':');
 
 % Set global variables
 global s
@@ -64,7 +66,7 @@ D1 = three_point_centered_D1(z);
 % call to ODE solver
 t0 = 0;
 tf = 100;
-dt = 2;
+dt = 5;
 yout = x;
 zout = z;
 nzout= [nzout; nz];
@@ -98,12 +100,12 @@ set(gca,'XTickLabel','');
 hold off
 
 %save plot
-plot_count=0;
-if use_local_refine == 0
-    print('-painters','-dpng',sprintf('imagesKDV\\static_moving_KDV_dt%d_%d',dt,plot_count))
-else
-    print('-painters','-dpng',sprintf('imagesKDV\\static_adapt_KDV_dt%d_%d',dt,plot_count))
-end
+% plot_count=0;
+% if use_local_refine == 0
+%     print('-painters','-dpng',sprintf('imagesKDV\\static_moving_KDV_dt%d_%d',dt,plot_count))
+% else
+%     print('-painters','-dpng',sprintf('imagesKDV\\static_adapt_KDV_dt%d_%d',dt,plot_count))
+% end
 
 tk = t0;
 tspan= [t0, tf];
@@ -168,13 +170,13 @@ while tk <= tf - 1.e-5
         tprint = tprint + dt;
         
         %save plot
-        plot_count = plot_count + 1;
-        if use_local_refine == 0
-            print('-painters','-dpng',sprintf('imagesKDV\\static_moving_KDV_dt%d_%d',dt,plot_count))
-        else
-            print('-painters','-dpng',sprintf('imagesKDV\\static_adapt_KDV_dt%d_%d',dt,plot_count))
-        end
-		
+%         plot_count = plot_count + 1;
+%         if use_local_refine == 0
+%             print('-painters','-dpng',sprintf('imagesKDV\\static_moving_KDV_dt%d_%d',dt,plot_count))
+%         else
+%             print('-painters','-dpng',sprintf('imagesKDV\\static_adapt_KDV_dt%d_%d',dt,plot_count))
+%         end
+% 		
     end
     error=[error max(abs(uexact-x))];
 	% compute a new differentiation matrix
@@ -182,9 +184,9 @@ while tk <= tf - 1.e-5
 end
 % plot and output highest error
 figure(2)
-plot(tout(2:end),error,'b--o')
+loglog(tout(2:end),error,'.b-','markersize',15)
 xlabel('t');
-ylabel('error');
+ylabel('max grid error');
 grid on
 % save error plot
 if use_local_refine == 0
@@ -198,3 +200,7 @@ fprintf('maximum grid error across all time steps = %6.4f\n',max(error));
 tcpu = toc;
 nav = sum(nzout)/length(nzout);
 fprintf('time = %6.4f, \naverage # mesh points = %8.4f \n\n',tcpu,nav);
+
+
+t = tout(2:end);
+end

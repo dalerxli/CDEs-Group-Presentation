@@ -1,5 +1,7 @@
-close all;
-clear;
+function [t,error] = main_burgers_MoL(nz,dt)
+
+%close all;
+%clear;
 % Start a stopwatch timer
 tic
 
@@ -10,7 +12,7 @@ set(0,'DefaultLegendFontSize',14,'DefaultLegendLocation','SouthWest','DefaultLeg
 %set default line properties
 set(0,'DefaultLineLineWidth',1.5);
 %set default grid properties
-set(0,'DefaultAxesGridLineStyle','-');
+set(0,'DefaultAxesGridLineStyle','factory');
 
 % Set global variables
 global mu eps
@@ -19,20 +21,19 @@ global nsteps maxsteps tprint tflag tout
 % Spatial grid
 z0 = 0;
 zL = 1;
-nz = 201; %number of mesh points
+%nz = 201; %number of mesh points
 nzout = nz; %vector to store all grid sizes used
 dz = (zL-z0)/(nz-1); %initial spatital grid step
 z = [z0:dz:zL]'; %spatial grid
 basez=z;
 error=[];
-nz_exact = 251;
-z_exact = linspace(z0,zL,nz_exact);
+z = linspace(z0,zL,nz);
 
 
 % Initial conditions
 mu = 0.001;
 for i=1:nz
-    x(i) = burgers_exact(z(i),0);
+    x(i) = burgers_exact_MoL(z(i),0);
 end;
 
 % parameters of the adaptive grid (for agereg function)
@@ -48,7 +49,7 @@ ilim = 1;   %(binary) whether to limit u_xx
 % call to ODE solver
 t0 = 0;     %initial time
 tf = 1;     %end time
-dt = 0.1;     %adaption frequency
+%dt = 0.1;     %adaption frequency
 yout = x;
 zout = z;
 nzout= [nzout; nz];
@@ -67,18 +68,18 @@ grid on
 hold on
 
 
-for i=1:nz_exact
-    uexact(i) = burgers_exact(z_exact(i),t0); %exact solution
+for i=1:nz
+    uexact(i) = burgers_exact_MoL(z(i),t0); %exact solution
 end
-plot(z_exact,uexact,'r','LineWidth',2);
+plot(z,uexact,'r','LineWidth',2);
 axis([0, 1, 0, 1.5]);
 legend('Approximate Solution','Exact Solution');
 
 hold off
 
 %save plot
-plot_count=0;
-print('-painters','-dpng',sprintf('images\\MoL_burgers_%d',plot_count))
+% plot_count=0;
+% print('-painters','-dpng',sprintf('images\\MoL_burgers_%d',plot_count))
 
 % differentiation matrix
 D1 = three_point_centered_D1(z); %use 3 point central FDM
@@ -98,7 +99,7 @@ while tk <= tf - 1.e-5
 	options = odeset(options,'JPattern',jpattern(nz));
 	[t,y,te,ye,ie] = ode15s(@burgers_adaptive_pde,tspan, ...
 	 	x,options);
-	%
+	
 	tk = t(end);
 	tspan = [tk, tf];
 	x = [];
@@ -115,10 +116,10 @@ while tk <= tf - 1.e-5
         hold on
 
         clearvars uexact
-        for i=1:nz_exact
-            uexact(i) = burgers_exact(z_exact(i),tk); %exact solution
+        for i=1:nz
+            uexact(i) = burgers_exact_MoL(z(i),tk); %exact solution
         end;
-		plot(z_exact,uexact(1:length(z_exact)),'r','LineWidth',2)
+		plot(z,uexact(1:length(z)),'r','LineWidth',2)
         xlabel('x');
         ylabel('u(x,t)');
         legend('Approximate Solution','Exact Solution');
@@ -127,19 +128,28 @@ while tk <= tf - 1.e-5
         hold off
         
         %save plot
-        plot_count=plot_count+1;
-        print('-painters','-dpng',sprintf('images\\MoL_burgers_%d',plot_count))
+%         plot_count=plot_count+1;
+%         print('-painters','-dpng',sprintf('images\\MoL_burgers_%d',plot_count))
         
 		tprint = tprint + dt;
 		
     end
-    
+
+    error=[error max(abs(uexact-x))];
     %error=[error max(abs(uexact-x'))];
 	% compute a new differentiation matrix
 	D1 = three_point_centered_D1(z);
 end
+figure(2)
+loglog(tout(2:end),error,'.b-','markersize',15)
+xlabel('t');
+ylabel('max grid error');
+grid on
 %fprintf('max grid error across all time steps = %6.4f\n',max(error));
 % read the stopwatch timer
 tcpu = toc; %output computation ttime
 nav = sum(nzout)/length(nzout); %output average number of mesh points
 fprintf('time = %6.4f, \naverage # mesh points = %8.4f \n\n',tcpu,nav);
+
+t = tout(2:end);
+end
